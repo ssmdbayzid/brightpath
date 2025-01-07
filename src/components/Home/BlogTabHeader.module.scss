@@ -7,6 +7,79 @@
   .goalNav {
     display: flex;
     justify-content: center;
+    
+    border-bottom: 1px solid #ddd;
+    max-width: 800px;
+    overflow: hidden; // Prevent scrollbar on desktop
+
+    @media screen and (max-width: 768px) {     
+      justify-content: start;               
+      overflow-x: auto; // Enable horizontal scroll for mobile devices
+      -webkit-overflow-scrolling: touch; // Smooth scrolling on iOS
+    }
+
+    .content {
+      text-align: center;
+      padding: 0 12px 15px;
+      cursor: pointer;
+      position: relative;
+      max-width: 150px; // Ensure proper spacing for tabs on smaller screens
+      flex-shrink: 0; // Prevent items from shrinking in mobile view
+
+      @media screen and (max-width: 768px) {   
+
+      }
+      .imageContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 56px;
+        width: 56px;
+        margin: 0 auto;
+        img {
+          max-height: 100%;
+          max-width: 100%;
+          object-fit: contain; // Ensure proper image fitting          
+        }
+      }
+
+      .title {
+        font-size: 15px;
+        font-weight: 600;        
+        text-wrap: wrap;
+        @media screen and (min-width: 1024px) {
+          font-size: 16px; // Larger text for desktop
+        }
+      }
+
+      &.active {
+        color: $primary-color;
+
+        &:after {
+          content: '';
+          width: 100%;
+          border: 1px solid $primary-color;
+          position: absolute;
+          bottom: -1px;
+          left: 0;
+        }
+      }
+    }
+  }
+}
+
+
+
+/*
+@import '@/styles/utility/variables';
+
+.header {
+  display: flex;
+  justify-content: center;
+
+  .goalNav {
+    display: flex;
+    justify-content: center;
     border-bottom: 1px solid #ddd;
     max-width: 800px;
 
@@ -54,3 +127,4 @@
     }
   };
 }
+  */

@@ -6,13 +6,13 @@ import Popular_Course_Carousel from "@/components/Home/Popular_Course_Carousel";
  const getAllCourses = async () => {
      const data = await fetch(`${process.env.API_URL}/api/course`);
      const courses = await data.json();
-     return courses;
+     return courses ? courses : null;
  }
 
 export default async function MostPopularBundle() {
     const courses = await getAllCourses()
 
-    console.log(courses)
+    
     return (
         <div className="">
             <div className="container">

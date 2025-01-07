@@ -19,8 +19,8 @@ export default function Home() {
     return (
    <div className="">
      <HeroSection />
-       <MostPopularBundle />
-       <PopularCourse />
+       {/* <MostPopularBundle /> */}
+       {/* <PopularCourse /> */}
         <AllCategory/>
        <BlogTab />
        <NewAddedCourse />

@@ -90,6 +90,7 @@
 
 .priceContent{
   display: flex;
+  align-items: center;
   justify-content: space-between;
   border-top: 1px solid rgba($secondary-color, 0.2);
   padding-bottom: 28px;
@@ -136,7 +137,8 @@
     width:50%;
     color: $white;
     cursor: pointer;
-  }.btn2{
+  }
+  .btn2{
      background: transparent;
      outline:none;
      border:2px solid $secondary-color;
@@ -149,4 +151,23 @@
      border-radius: 10px;
      text-align: center;
    }
+}
+
+@media screen and (max-width: 768px){
+  .swiper{
+    width: 100%;
+    .swiperNavButton{
+      top: 20%;
+      padding: 0 7px;
+    }
+  }
+  .priceContent{
+    flex-direction: column;  
+}
+.actionbtns{
+  width: 100%;
+  flex-direction: column;
+  .btn{width:100%}
+  a{width: 100%!important};
+}
 }

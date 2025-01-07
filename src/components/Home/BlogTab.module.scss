@@ -1,10 +1,16 @@
+@import '@/styles/utility/variables';
+
 .heading{
   max-width: 500px;
-  margin: 50px auto 20px;
+  margin: 50px auto 30px;
   text-align: center;
   h1{
-    font-size: 3rem;
+    font-size: 30px;
     font-weight: 900!important;
+    @media screen and (max-width: 768px){
+    font-size: 35px;
+    font-weight: 600;
+    }
   }
   p{
     font-size: 1.2rem;
@@ -14,6 +20,13 @@
   }
 }
 
+
 @media screen and (max-width: 768px){
-  .title{font-size: 15px}
+  .heading{
+    p{
+      font-size: 15px;
+      color: rgba($black, 0.5);
+    }
+  }
 }
+ 
