@@ -1,0 +1,82 @@
+@import '../../utility/variables';
+.footer{
+  background-color: black;
+  padding: 50px 0;
+  color:$white;
+  margin-top: 50px;
+}
+.footerArea{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:30px;
+}
+
+.content{
+  .title{
+    color: $primary-color;
+    margin-bottom: 30px;
+  }
+  ul li{
+    color: rgba($white, 0.7);
+    margin-bottom: 10px;
+  }
+  form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    ::placeholder{color: $primary-color}
+    button{
+      background-color: $primary-color;
+      outline: none;
+      border: none;
+      padding: 10px;
+      color: $black;
+      font-size: 15px;
+      font-weight: 600;
+    }
+  }
+}
+
+.input{
+  background: rgba($black, 0.1);
+  outline: none;
+  border: 1px solid $primary-color;
+  padding: 15px 30px;
+  color: $primary-color;
+}
+
+.icons{
+  display: flex;
+  gap: 20px;
+  a{
+    color: $primary-color;
+    padding: 5px;
+    border:1px solid $primary-color;
+  }
+}
+
+.copyRight{
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 30px;
+  background-color: $primary-color;
+  color: $secondary-color;
+  font-weight: 500;
+  span{
+    font-weight: 700;
+    text-wrap: nowrap;
+  }
+}
+
+@media screen and (max-width: 1024px){
+  .footerArea{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 768px){
+  .footerArea{
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

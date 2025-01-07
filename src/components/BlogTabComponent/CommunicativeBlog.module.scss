@@ -1,0 +1,152 @@
+@import '@/styles/utility/variables';
+.swiper{
+  width: 70%;
+  position: relative;
+
+
+  .swiperNavButton{
+    position: absolute;
+    z-index: 9999;
+    top: 30%;
+    width: 100%;
+    padding: 0 25px;
+    display: flex;
+    justify-content: space-between;
+
+    .prevButton{
+      background-color: $primary-color;
+      outline: none;
+      border: 2px solid $white;
+      width: 40px;
+      height: 40px;
+      border-radius: 50px;
+      color: $white;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+    .nextButton {
+      background-color: $primary-color;
+      outline: none;
+      border: 2px solid $white;
+      width: 40px;
+      height: 40px;
+      border-radius: 50px;
+      color: $white;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+  }
+}
+
+.card {
+  margin: 30px auto 0;
+  position: relative;
+
+  .thumbnail {
+    width: 100%;
+    height: 100%;
+  }
+
+}
+.cardContent{
+  margin-top: 12px;
+  .title{margin-bottom: 30px;}
+  .ratingCount{
+    display: flex;
+    justify-content: space-between;
+    .ratingContent{
+      display: flex;
+      gap: 3px;
+      color: $primary-color;
+      .ratingIcon{
+        font-size: 20px;
+      }
+
+    }
+  }
+  .tagContent{
+    display: flex;
+    flex-wrap: wrap;
+    gap:5px;
+    margin: 20px 0;
+    .tag{
+      background-color: $pale-yellow;
+      padding: 5px 8px;
+      font-size: 13px;
+    }
+  }
+  .summary{font-size: 15px; font-weight: 600;}
+}
+.studentsCount{
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.priceContent{
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid rgba($secondary-color, 0.2);
+  padding-bottom: 28px;
+  padding-top: 10px;
+  margin-top: 25px;
+
+  .prices {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    del {
+      font-weight: 700;
+      color: rgba($black, 0.5);
+      font-size: 13px;
+    }
+
+    span {
+      font-weight: 700;
+      color: $primary-color;
+      font-size: 16px;
+    }
+
+    h3{
+      font-weight: 700;
+      color: $black;
+      font-size: 20px;
+    }
+  }
+}
+
+.actionbtns{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap:20px;
+  width: 40%;
+  margin-top:10px;
+  .btn{
+    background: $primary-color;
+    border-radius: 10px;
+    outline:none;
+    border:none;
+    padding: 14px;
+    width:50%;
+    color: $white;
+    cursor: pointer;
+  }.btn2{
+     background: transparent;
+     outline:none;
+     border:2px solid $secondary-color;
+     color: $secondary-color;
+     padding: 10px;
+     width:50%;
+     font-weight: 600;
+     text-wrap: nowrap;
+     cursor: pointer;
+     border-radius: 10px;
+     text-align: center;
+   }
+}

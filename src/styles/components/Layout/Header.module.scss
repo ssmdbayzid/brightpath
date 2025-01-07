@@ -1,0 +1,192 @@
+@import '../../utility/variables';
+
+
+.header {
+  background-color: $white;
+  position: relative;
+}
+.mobileSearchField {
+  position: relative;
+  display: none;
+  align-items: center;
+  width:40%;
+  .searchInput {
+    width: 100%;
+    padding: 14px 20px;
+    outline: none;
+    border: none;
+  }
+  .searchIcon {
+    position: absolute;
+    color: $primary-color;
+    right: 10px;
+    font-size: 20px;
+  }
+}
+
+.menuLogo{
+  display: flex;
+  align-items: center;
+  .icon {
+    font-size: 30px;
+    color: $primary-color;
+  }
+}
+.headerContent {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  font-size: 17px;
+
+
+  ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    li{text-wrap: nowrap}
+  }
+}
+
+.searchField {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width:40%;
+  .searchInput {
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 50px;
+    outline: none;
+    border: 1px solid $primary-color;
+  }
+  .searchIcon {
+    position: absolute;
+    color: $primary-color;
+    right: 10px;
+    font-size: 20px;
+  }
+}
+
+.btnContainer {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  .loginBtn {
+    background-color: $primary-color;
+    border: 1px solid $primary-color;
+    color: $white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $primary-color;
+      color: $white;
+    }
+  }
+
+  .signupBtn {
+    background-color: $primary-color;
+    color: $white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $secondary-color;
+    }
+  }
+}
+
+.shopping{
+  position: relative;
+  cursor: pointer;
+  span{
+    background-color: $primary-color;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-size: 12px;
+  }
+  .cartIcon{
+    font-size: 25px;
+  }
+}
+
+.MenuContiner{
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: $white;
+  width: 100%;
+  z-index: 1000;
+  padding: 10px 20px;
+}
+.dropdown{
+  position: relative;
+  cursor: pointer;
+  .dropdownLinks{
+    position: absolute;
+    top: 40px;
+    left: 0;
+    box-shadow: 0 4px 6px rgba($black, 0.1), 0 1px 3px rgba($black, 0.08);
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: $white;
+    align-items: flex-start;
+    li{
+      padding: 5px 0;
+    }
+  }
+}
+//------------------- Category Menu ------------
+.categoryMenu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  .category_menu_button{
+    background: none;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    color: $black;
+    cursor: pointer;
+    margin:0;
+    transition: all 0.3s linear;
+    padding: 8px 10px;
+    border-radius: 6px;
+    display:inline-block;
+    border: 1px solid $black;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .container{padding: 5px 20px}
+  .links{display: none;}
+  .searchField{display: none}
+  .icon{font-size: 25px;}
+  .shopping{.cartIcon{font-size: 35px;}}
+  .mobileSearchField{display: flex; width: 100%;}
+  .btnContainer{.loginBtn {padding: 10px 15px;}}
+  .headerContent{gap:5px;}
+  .categoryMenu{display: none}
+}
+@media screen and (min-width: 768px){
+  .icon{display: none}
+  .mobile-menu{display: none}
+  .MenuContiner{display: none}
+}

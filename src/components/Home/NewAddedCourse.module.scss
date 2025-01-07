@@ -1,0 +1,43 @@
+@import "@/styles/utility/variables";
+
+.newCourseArea{
+    background: $new-course-bg;
+}
+.courseContent{
+  padding: 80px 0 100px;
+  .courseHeading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    h1{
+      font-size: 40px;
+      font-weight: 600!important;
+    }
+    p{
+      font-size: 20px;
+    }
+    .btn{
+      padding: 15px 30px;
+      color: $black;
+      border: 2px solid $black;
+      border-radius: 10px;
+      font-weight: 600;
+    }
+  }
+}
+
+@media screen and (max-width: 768px){
+  .courseHeading{
+    flex-direction: column;
+    .btn{width: 100%};
+    h1{
+      font-size: 20px;
+    }
+    p{
+      font-size: 25px;
+      line-height: 2rem;
+    }
+    a{text-align: center; margin-top: 20px;}
+  }
+}

@@ -1,0 +1,94 @@
+@import '@/styles/utility/variables';
+
+.menu{
+  display: flex;
+  flex-direction: column; // Stack items vertically
+  justify-content: space-between; // Push the buttons to the bottom
+height: 100vh;
+  padding: 20px;
+  ul{flex: 1}
+}
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $white!important;
+  img{
+    height:70px!important;
+    width: 70px!important;
+  }
+  .icon{font-size: 35px; color: $primary-color;}
+}
+
+
+.btnWrap{
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  .btn{
+    padding: 15px;
+    width: 50%;
+    background-color: $primary-color;
+    outline: none;
+    border: 2px solid $primary-color;
+  }
+}
+.dropdown {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid rgba($black, 0.3);
+  color: rgba($black, 0.7);
+  font-weight: 600;
+  a{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  ul {
+    padding-top: 20px;
+    max-height: 300px; // Set maximum height for scrollable area
+    overflow-y: auto; // Enable vertical scrolling
+    border-radius: 4px;
+
+    // Optional: Customize scrollbar
+    &::-webkit-scrollbar {
+      width: 5px; // Width of the scrollbar
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba($primary-color, 0.4); // Color of the scrollbar thumb
+      border-radius: 4px; // Round the edges
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background-color: darken($primary-color, 10%); // Darken on hover
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: rgba($black, 0.1); // Background of the scrollbar track
+    }
+
+    li {
+      color: rgba($black, 0.7);
+      font-weight: 500;
+      padding: 15px 0;
+      border-bottom: 1px solid rgba($black, 0.3);
+    }
+  }
+}
+.arrow {
+  font-size: 20px;
+  color: $primary-color;
+  transition: transform 0.3s ease; // Smooth rotation transition
+  &.open {
+    transform: rotate(180deg); // Rotate the arrow 180° to point up
+  }
+}
+
+@media screen and (min-width: 768px){
+  .menu{
+    display: none;
+  }
+}

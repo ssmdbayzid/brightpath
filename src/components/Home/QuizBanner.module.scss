@@ -1,0 +1,18 @@
+@import '@/styles/utility/variables';
+.bannerArea{
+  padding: 80px 0;
+.title{
+  font-size: 40px;
+}
+  .para{
+    font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 40px;
+  }
+  .btn{
+    padding: 15px 35px;
+    background-color: $primary-color;
+    border-radius: 10px;
+    color: $white;
+  }
+}

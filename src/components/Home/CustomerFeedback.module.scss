@@ -1,0 +1,56 @@
+@import '@/styles/utility/variables';
+
+.feedbackArea{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  .feedbackContent{
+    width: 45%;
+    position: relative;
+    padding: 20px;
+    .image{
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      margin-bottom: 30px;
+    }
+    .name{
+      margin-bottom: 15px;
+    }
+    .designation{
+      margin-bottom: 35px;
+      color: rgba(black, 0.4);
+      font-weight: 500!important;
+    }
+    .feedback{
+      font-weight: 600;
+    }
+    .quoteIcon{
+      position: absolute;
+      top: 0;
+      right: 30px;
+      background: $pale-yellow;
+      width: 53px;
+      height: 53px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 25px;
+      color: $black;
+    }
+  }
+}
+
+@media screen and (max-width: 768px){
+  .feedbackArea{
+    flex-direction: column;
+    padding: 30px 0;
+    .feedbackContent{
+      width: 100%;
+      .quoteIcon{
+        top: 18px;
+      }
+    }
+  }
+}

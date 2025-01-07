@@ -1,0 +1,115 @@
+@import '@/styles/utility/variables';
+.contentArea{
+  display: flex;
+  align-items: start;
+  gap: 20px;
+
+}
+.courseImage{
+  width: 40%;
+  height: 100%;
+  position: relative;
+  img{
+    height:100%;
+    width: 100%;
+    object-fit:cover;
+  }
+}
+
+.content{
+  width:60%;
+}
+
+.ratingCount{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  .rating{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:10px;
+    font-weight: 600;
+    span{
+      color: $primary-color;
+      font-size: 20px;
+    }
+  }
+}
+.students{
+  color: rgba($black, 0.5);
+  font-weight: 600;
+  font-size: 18px;
+}
+.details{
+  hr{
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+.prices{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 10px;
+  gap:10px;
+  .oldPrice{color: rgba($black, 0.6); font-weight: 600; font-size: 15px;}
+  .percent{color: $primary-color; font-weight: 600; font-size: 18px;}
+}
+
+.actionbtns{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  .btn{
+    padding: 15px;
+    width: 50%;
+    background-color: $primary-color;
+    color: $white;
+    text-align: center;
+    outline: none;
+    border: none;
+    cursor: pointer;
+  }
+  .btn2{
+    padding: 12px;
+    width: 50%;
+    background-color: transparent;
+    border: 2px solid $primary-color;
+    color: $primary-color;
+    text-align: center;
+    outline: none;
+    cursor: pointer;
+  }
+}
+
+
+.features{
+  font-weight: 600;
+  font-size: 15px;
+  padding-bottom: 10px;
+}
+//--------- Responsive Styling ------------
+
+@media screen and (max-width: 768px){
+  .contentArea{flex-direction: column}
+  .courseImage{width:100%}
+  .content{width: 100%}
+  .ratingCount{
+    flex-direction: column;
+    gap: 10px;
+  }
+.summary{text-align: justify; line-height: 2;}
+  .details{ h1{  font-size: 28px; text-align: center;}
+  }
+  .features{
+    font-weight: 500;
+    font-size: 15px;
+    padding-bottom: 18px;
+    text-align: justify;
+  }
+}
