@@ -18,7 +18,7 @@ export default async function MostPopularBundle() {
         <div className="">
             <div className="container ">
                 <div className={` ${styles.titleContainer}`}>
-                    <h1>Most Popular Courses</h1>
+                    <h1 className="section-title">Most Popular Courses</h1>
                     <Link href="/bundles" className="btn">All</Link>
                 </div>
                 <div>

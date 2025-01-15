@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function HeroSection() {
     return (
-        <div className="container section">
+        <div className="container">
             {/*----------- Category Menu -----------*/}
 
             <div className={styles.banner}>

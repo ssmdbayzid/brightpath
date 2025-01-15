@@ -8,6 +8,7 @@ background-position: bottom right;
   min-height: 412px;
   display: flex;
   align-items: center;
+  margin-bottom: 80px;
 }
 
 .heroContent {
@@ -15,7 +16,7 @@ background-position: bottom right;
   text-align: left;
   h1{
     font-size: 65px;
-    font-weight: 900;
+    font-weight: 700;
   }
   p{
     color: $dark-gray;
@@ -45,15 +46,15 @@ background-position: bottom right;
   }
   .btn2{
     cursor: pointer;
-    background: transparent;
+    background: $primary-color;
     outline:none;
-    color: $black;
     font-weight: 600;
     text-align: center;
-    border: 2px solid $black;
+    border: 2px solid $primary-color;
+    color: $white;
     &:hover{
-      background: $black;
-      color: $white;
+      background: transparent;
+      color: $primary-color;
     }
   }
 }
