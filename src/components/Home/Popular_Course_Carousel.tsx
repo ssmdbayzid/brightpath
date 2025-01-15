@@ -5,15 +5,14 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import styles from './PopularCourseCarousel.module.scss';
-import { Course } from "@/components/Courses/Course";
+
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
 import Image from "next/image";
-import img from "@/assets/image/img1.png";
-import {IoStar} from "react-icons/io5";
-import {PiStudent} from "react-icons/pi";
+
 import {CartButtons} from "@/components/Courses/CartButtons";
 import { FaStar } from "react-icons/fa6";
+import Link from "next/link";
 export default function Popular_Course_Carousel({ courses }) {
     const swiperRef = useRef(null);
     useEffect(() => {
@@ -80,7 +79,7 @@ export default function Popular_Course_Carousel({ courses }) {
                             <Image src={course.thumbnail} className={styles.img} width={300} height={200}
                                    alt="course-image"/>
                             <div className={styles.cardContent}>
-                                <a href={`/all-courses/${course._id}`}><h2>{course.title}</h2></a>
+                                <Link href={`/all-courses/${course._id}`}><h2>{course.title}</h2></Link>
                                 <div className={styles.remarks}>
                                     <div className={styles.ratingContent}>
                                         {[...Array(5)].map((_, index) => (
@@ -91,13 +90,14 @@ export default function Popular_Course_Carousel({ courses }) {
                                 </div>
                                 <ul className={styles.tag_list}>
                                     {course && course.categories.map((tag, index) =>
-                                        <li key={index} className={styles.carousel_tag_items}>{tag}</li>)}
+                                        <Link key={index} href={`/categories?keyword=${tag}`}>
+                                        <li  className={styles.carousel_tag_items}>{tag}</li></Link>)}
                                 </ul>
 
 
                                 <p className={styles.summary}>
                                     {course.summary.split(" ").slice(0, 10).join(" ")+"   "}
-                                    <a href={`/all-courses/${course._id}`}>...Show Details</a></p>
+                                    <Link href={`/all-courses/${course._id}`}>...Show Details</Link></p>
                                 <div className={styles.priceContent}>
                                     <div className={styles.prices}>
                                         <del>{course.price_old}</del>

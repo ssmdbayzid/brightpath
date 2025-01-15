@@ -6,7 +6,11 @@ import { BiSolidQuoteAltLeft } from "react-icons/bi";
 
 export default function CustomerFeedback (){
     return (
-        <div className="container">
+        <div className=" section">
+            <div className={`${styles.heading} `}>
+                <h2 className="section-title">What customers say about us.</h2>
+                <p className="section-para"> Over 50,000 satisfied customers that have trusted Ghoori Learning since 2020.</p>
+            </div>
             <div className={styles.feedbackArea}>
                 { customerFeedback && customerFeedback.map((customer, index) => (
                     <div key={index} className={styles.feedbackContent}>

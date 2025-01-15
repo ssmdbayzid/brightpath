@@ -1,7 +1,7 @@
 @import '../../utility/variables';
 .footer{
-  background-color: black;
-  padding: 50px 0;
+  background-color: #202020;
+  padding: 50px 0 15px;
   color:$white;
   margin-top: 50px;
 }
@@ -12,29 +12,22 @@
 }
 
 .content{
-  .title{
-    color: $primary-color;
+  .titleContainer{
+    color: $white;
     margin-bottom: 30px;
+    padding-bottom: 10px;
+  .icon{display: none}
   }
   ul li{
     color: rgba($white, 0.7);
     margin-bottom: 10px;
-  }
-  form{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    ::placeholder{color: $primary-color}
-    button{
-      background-color: $primary-color;
-      outline: none;
-      border: none;
-      padding: 10px;
-      color: $black;
-      font-size: 15px;
-      font-weight: 600;
+    .callIcon{
+      display: flex;
+      align-items: center;
+      gap: 7px;
     }
   }
+
 }
 
 .input{
@@ -45,28 +38,26 @@
   color: $primary-color;
 }
 
-.icons{
-  display: flex;
-  gap: 20px;
-  a{
-    color: $primary-color;
-    padding: 5px;
-    border:1px solid $primary-color;
-  }
-}
-
 .copyRight{
+  padding-top: 15px;
   margin-top: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 30px;
-  background-color: $primary-color;
-  color: $secondary-color;
+
+  color: rgba($white, 0.7);;
   font-weight: 500;
+  border-top: 2px solid rgba($white, 0.2);
   span{
     font-weight: 700;
     text-wrap: nowrap;
+  }
+  .links{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .copyRightContent{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 }
 
@@ -79,4 +70,29 @@
   .footerArea{
     grid-template-columns: repeat(1, 1fr);
   }
+
+  .content:nth-of-type(1) .titleContainer,
+  .content:nth-of-type(2) .titleContainer {
+    border-bottom: 2px solid #373737;
+  }
+  .content:nth-of-type(1) .list,
+  .content:nth-of-type(2) .list{
+    position: absolute; top: 0; width: 95%; height: 100%; color:red; z-index: 999;
+  }
+  .content{
+    transition: all 0.2s;
+    &.active{
+      .icon{rotate:180deg}
+      .list{position: relative}
+    }
+    .titleContainer{
+      display: flex;
+      justify-content: space-between;
+      //overflow: hidden;
+      .icon{display: block; fill: white}
+    }
+
+  }
+
+
 }

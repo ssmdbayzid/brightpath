@@ -1,5 +1,6 @@
 import { Modal } from 'react-responsive-modal';
 import styles from './SignUp.module.scss'
+import Link from "next/link";
 
 export const SignUp = ({openSignupModal, setOpenSignupModal, openLoginModal, setOpenLoginModal}) => {
     const onCloseModal = () => {
@@ -29,7 +30,7 @@ export const SignUp = ({openSignupModal, setOpenSignupModal, openLoginModal, set
         <form action="#" className={styles.form}>
             <input type="text" placeholder="Mobile" className={styles.input}/>
             <button>Sign Up</button>
-            <a href="#" className={styles.link}>Already a member? <span onClick={handleSwitch}>Log In</span></a>
+            <Link href="#" className={styles.link}>Already a member? <span onClick={handleSwitch}>Log In</span></Link>
         </form>
     </Modal>
 }

@@ -1,4 +1,4 @@
-import styles from './HeroSection.module.scss'
+
 
 export default function AllCourses() {
   return (

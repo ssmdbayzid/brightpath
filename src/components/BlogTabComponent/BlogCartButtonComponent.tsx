@@ -2,6 +2,7 @@ import styles from './CommunicativeBlog.module.scss'
 import {addToCart} from "@/store/features/cartSlice";
 import React from "react";
 import {useDispatch} from "react-redux";
+import Link from "next/link";
 
 export default function BlogCartButtonComponent ({course}){
     const dispatch = useDispatch();
@@ -10,7 +11,7 @@ export default function BlogCartButtonComponent ({course}){
                 <button onClick={() => dispatch(addToCart(course))} className={styles.btn}>Add to
                     card
                 </button>
-                <a href={`/bundles`} className={styles.btn2}>Share & Earn</a>
+                <Link href={`/bundles`} className={styles.btn2}>Share & Earn</Link>
             </div>
     )
 }

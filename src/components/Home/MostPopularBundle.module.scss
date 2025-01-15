@@ -5,7 +5,6 @@
   justify-content: space-between;
   align-items: center;
  a{
-   padding: 14px 35px;
    color:$black;
    border: 2px solid $black;
  }
@@ -78,15 +77,20 @@
   }.btn2{
     background: transparent;
     outline:none;
-    border:2px solid $secondary-color;
-    color: $secondary-color;
-    padding: 12px;
+    border:2px solid $black;
+    color: $black;
+    padding: 13px;
     width:50%;
   font-weight: 600;
   text-wrap: nowrap;
-  cursor: pointer;
+  cursor: pointer!important;
   border-radius: 10px;
   text-align: center;
+  transition: all 0.3s ease;
+       &:hover{
+         background-color: $black;
+         color: $white;
+       }
   }
 }
 

@@ -6,6 +6,7 @@ import { RiMenuFill } from "react-icons/ri";
 import { RxCross2 } from "react-icons/rx";
 import { IoIosArrowDown } from "react-icons/io";
 import {useState} from "react";
+import Link from "next/link";
 
 const links = [
     { "href": "/categories/creative-skill", "display": "Creativity & Design" },
@@ -34,16 +35,16 @@ const [openOthers, setOpenOthers] = useState(false)
                 <RxCross2 onClick={() => setOpenMenu(!openMenu)} className={styles.icon}/>
             </div>
             <ul>
-                <li className={styles.dropdown} onClick={()=>setOpenCategories(!openCategories)}> <a href="#">Explore Categories <IoIosArrowDown className={`${styles.arrow} ${openCategories ? styles.open : ""}`}/></a>
+                <li className={styles.dropdown} onClick={()=>setOpenCategories(!openCategories)}> <Link href="#">Explore Categories <IoIosArrowDown className={`${styles.arrow} ${openCategories ? styles.open : ""}`}/></Link>
                     {openCategories && <ul>
-                        {links && links.map(list => <li key={list.display}><a href={list.href}>{list.display}</a></li>)}
+                        {links && links.map(list => <li key={list.display}><Link href={list.href}>{list.display}</Link></li>)}
                     </ul>}
                 </li>
-                <li className={styles.dropdown} onClick={()=>setOpenOthers(!openOthers)}> <a href="#">Others <IoIosArrowDown /></a>
+                <li className={styles.dropdown} onClick={()=>setOpenOthers(!openOthers)}> <Link href="#">Others <IoIosArrowDown /></Link>
                     {openOthers && <ul>
-                        <li><a href="/blogs">Blogs</a></li>
-                        <li><a href="/courses">All Course</a></li>
-                        <li><a href="/https://bbcjanala.ghoorilearning.com/">BBC Janala</a></li>
+                        <li><Link href="/blogs">Blogs</Link></li>
+                        <li><Link href="/all-courses">All Course</Link></li>
+                        <li><Link href="/https://bbcjanala.ghoorilearning.com/">BBC Janala</Link></li>
                     </ul>}
                 </li>
             </ul>

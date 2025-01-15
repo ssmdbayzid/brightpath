@@ -5,6 +5,7 @@ import img from "@/assets/image/img1.png";
 import {IoStar} from "react-icons/io5";
 import {PiStudent} from "react-icons/pi";
 import {CartButtons} from "@/components/Courses/CartButtons";
+import Link from "next/link";
 
 export function Course({course}) {
     return <div  className={styles.card}>
@@ -12,7 +13,7 @@ export function Course({course}) {
             <Image src={img} className={styles.img} alt="course-image"/>
         </div>
         <div className={styles.cardContent}>
-            <a href={`/all-courses/${course._id}`}><h2>{course.title}</h2></a>
+            <Link href={`/all-courses/${course._id}`}><h2>{course.title}</h2></Link>
             <div className={styles.remarks}>
                 <div className={styles.ratingContent}>
                     <IoStar className={styles.ratingIcon}/> <span>{course.rating}</span>

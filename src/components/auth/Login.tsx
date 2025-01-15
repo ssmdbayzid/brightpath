@@ -1,5 +1,6 @@
 import { Modal } from 'react-responsive-modal';
 import styles from './LoginStyles.module.scss'
+import Link from "next/link";
 export const Login = ({openLoginModal, setOpenLoginModal, openSignupModal, setOpenSignupModal,}) => {
     const onCloseModal = () => {
         setOpenLoginModal(!openLoginModal);
@@ -28,9 +29,9 @@ export const Login = ({openLoginModal, setOpenLoginModal, openSignupModal, setOp
         <form action="#" className={styles.form}>
             <input type="text" placeholder="Mobile" className={styles.input}/>
             <input type="password" placeholder="Password" className={styles.input}/>
-            <a href="#">Forget Password?</a>
+            <Link href="#">Forget Password?</Link>
             <button>Log In</button>
-            <a onClick={()=>{}} href="#" className={styles.link}>Don't have an account? <span onClick={handleSwitch}>Sign up</span></a>
+            <Link onClick={()=>{}} href="#" className={styles.link}>Don't have an account? <span onClick={handleSwitch}>Sign up</span></Link>
         </form>
     </Modal>
 }

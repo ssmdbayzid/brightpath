@@ -14,6 +14,7 @@ import styles from './PopularCourseItems.module.scss'
 import {addToCart} from "@/store/features/cartSlice";
 
 import {useDispatch} from "react-redux";
+import Link from "next/link";
 
 export default function PopularCourseItems({courses}) {
     const swiperRef = useRef(null);
@@ -78,10 +79,10 @@ export default function PopularCourseItems({courses}) {
                             <Image src={img} width={450} height={340} className={styles.img} alt="course-image"/>
                         </div>
                         <div className={styles.cardContent}>
-                            <a href={`/all-courses/${course._id}`}><h2>{course.title}</h2></a>
+                            <Link href={`/all-courses/${course._id}`}><h2>{course.title}</h2></Link>
                             <p className={styles.students}>{course.students} Students</p>
                             <ul className={styles.tagList}>
-                                {course.categories.map(tag=><a key={tag} className={styles.tag}>{tag}</a>)}
+                                {course.categories.map(tag=><Link href={`/all-courses?keyword=${tag}`} key={tag} className={styles.tag}>{tag}</Link>)}
                             </ul>
                             <p className={styles.summary}>{course.summary}</p>
                             <ul className={styles.lists}>
@@ -101,7 +102,7 @@ export default function PopularCourseItems({courses}) {
                                     <button onClick={() => dispatch(addToCart(course))} className={styles.btn}>Add to
                                         card
                                     </button>
-                                    <a href={`/bundles`} className={styles.btn2}>Share & Earn</a>
+                                    <Link href={`/bundles`} className={styles.btn2}>Share & Earn</Link>
                                 </div>
                             </div>
                         </div>

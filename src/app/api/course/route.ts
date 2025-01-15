@@ -12,9 +12,38 @@ const connectedDB = async()  =>{
 connectedDB().catch(err=>console.log(err))
 
 
-export async function GET(){
-    const courses = await Course.find();
-    return NextResponse.json({message:"this from course", data: courses})
+export async function GET(req:NextRequest, res){
+    const searchParams = req.nextUrl.searchParams;
+    const pageNumber = parseInt(searchParams.get("page") || "1", 10);
+    const keyword = searchParams.get("keyword");
+
+
+    const limit = 9;
+    const skip = (pageNumber- 1) * limit;
+
+    let courses;
+    let totalCourses;
+
+    if(pageNumber){
+        courses = await Course.find().skip(skip).limit(limit);
+        totalCourses = await Course.countDocuments();
+    }if(keyword){
+        const matchQuery = {categories: {$regex: keyword, $options: "i"}}
+        courses = await Course.aggregate([
+            {$match: matchQuery},
+            {$skip: skip},
+            {$limit: limit},
+        ])
+        totalCourses = await Course.countDocuments(matchQuery);
+    }
+
+    return NextResponse.json({
+        message:"this from course",
+        data: courses,
+        total: totalCourses,
+        page:pageNumber,
+        totalPages: Math.ceil(totalCourses / limit),
+    })
 }
 
 export async function POST(req){

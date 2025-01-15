@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.scss";
 import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 import ReduxProvider from "@/Hooks/ReduxProvider";
 import 'react-responsive-modal/styles.css';
+import GoToButton from "@/components/layout/GoToButton";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,20 +22,22 @@ export const metadata: Metadata = {
   description: "Brightpath Institute",
 };
 
-export default function RootLayout({
-                                     children,
-                                   }: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({children,}: Readonly<{children: React.ReactNode;}>) {
   return (
       <html lang="en">
       <head>
-        <link rel="icon" href="/logo.png" type="image/x-icon" sizes="16x16" />
+          <link rel="icon" href="/logo.png" type="image/x-icon" sizes="16x16"/>
+          <link rel="preconnect" href="https://fonts.googleapis.com"/>
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true"/>
+          <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+                rel="stylesheet"/>
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
       <ReduxProvider>
-        <Header />
-        <div className="">{children}</div>
+          <Header/>
+      <GoToButton />
+          <div className="children">{children}</div>
+          <Footer/>
       </ReduxProvider>
       </body>
       </html>

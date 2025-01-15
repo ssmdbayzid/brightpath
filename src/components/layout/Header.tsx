@@ -14,20 +14,15 @@ import {Modal} from 'react-responsive-modal';
 
 
 import {useSelector} from "react-redux";
-import {categoryLinks} from "@/assets/data";
+import {categoryLinks, categoryMenu} from "@/assets/data";
 import {Login} from "@/components/auth/Login";
 import {SignUp} from "@/components/auth/SignUp";
+import { RiShoppingCartFill } from "react-icons/ri";
+import {useRouter} from "next/navigation";
+import Link from "next/link";
 
-const categoryMenu = [
-    "Graphics Design",
-    "Language Courses",
-    "Web Design",
-    "Photography",
-    "Data Entry",
-    "English Learning",
-    "IELTS",
-    "Digital Marketing"
-]
+
+
 
 export default function Header() {
     const [openMenu, setOpenMenu] = useState(false);
@@ -46,6 +41,13 @@ export default function Header() {
         }
     }, [cartItems]);
 
+    const router = useRouter();
+    const handleSearchCourse = async (event: any) => {
+        event.preventDefault();
+
+            router.push(`/all-courses?keyword=${event.target.course.value}`);
+}
+
     return (
         <div className="">
             <div className={styles.header}>
@@ -53,9 +55,9 @@ export default function Header() {
                     <div className={styles.headerContent}>
                         <div className={styles.menuLogo}>
                             {!openMenu && <RiMenuFill onClick={() => setOpenMenu(!openMenu)} className={styles.icon}/>}
-                            <a href="/"> <Image
+                            <Link href="/"> <Image
                                 src="https://cdn.ghoorilearning.com/uploads/images/20220717172448-62d3f180acee3.svg"
-                                height={100} width={150} className={styles.logo} alt="logo"/></a>
+                                height={50} width={200} className={styles.logo} alt="logo"/></Link>
                         </div>
                         <div>
 
@@ -65,47 +67,56 @@ export default function Header() {
                                 <li onClick={() => setOpenCategories(!openCategories)}
                                     className={styles.dropdown}> Explore Category &nbsp; <MdKeyboardArrowDown/>
                                     {openCategories && <ul className={styles.dropdownLinks}>
-                                        {categoryLinks && categoryLinks.map(link => <li key={link.display}><a
-                                            href={link.href}>{link.display}</a></li>)}
+                                        {categoryLinks && categoryLinks.map(link => <li key={link.display}><Link
+                                            href={link.href}>{link.display}</Link></li>)}
                                     </ul>}
                                 </li>
                                 <li onClick={() => setOpenOthers(!openOthers)} className={styles.dropdown}>Others &nbsp;
                                     <MdKeyboardArrowDown/>
                                     {openOthers && <ul className={styles.dropdownLinks}>
-                                        <li><a href="/blogs">Blogs</a></li>
-                                        <li><a href="/all-courses">All Course</a></li>
-                                        <li><a href="/https://bbcjanala.ghoorilearning.com/">BBC Janala</a></li>
+                                        <li><Link href="/blogs">Blogs</Link></li>
+                                        <li><Link href="/all-courses">All Course</Link></li>
+                                        <li><Link href="/https://bbcjanala.ghoorilearning.com/">BBC Janala</Link></li>
                                     </ul>}
                                 </li>
                             </ul>
                         </div>
+
                         <div className={styles.searchField}>
-                            <input type="text" placeholder="What do you want to learn?" className={styles.searchInput}/>
-                            <IoSearchOutline className={styles.searchIcon}/>
+                            <form className={styles.searchForm} onSubmit={handleSearchCourse}>
+                                <input type="text" name="course" placeholder="What do you want to learn?"
+                                       className={styles.searchInput}/>
+                               <button ><IoSearchOutline type='submit' className={styles.searchIcon}/></button>
+
+                            </form>
                         </div>
-                        <div className={styles.btnContainer}>
-                            <button onClick={() => setOpenLoginModal(!openLoginModal)}
-                                    className={styles.loginBtn}>Login
-                            </button>
-                            <a href="/cart" className={styles.shopping}>
-                                <MdOutlineShoppingCart className={styles.cartIcon}/>
+
+                    <div className={styles.btnContainer}>
+                            <button className={styles.lenuageButton}>English</button>
+                            <Link href="/cart" className={styles.shopping}>
+                                <RiShoppingCartFill className={styles.cartIcon}/>
                                 <span>{cart ? cart?.length : 0}</span>
-                            </a>
+                            </Link>
+                            <Link href="#" onClick={() => setOpenLoginModal(!openLoginModal)}
+                               className={styles.loginBtn}>Login
+                            </Link>
+                            <Link href="#" onClick={() => setOpenSignupModal(!openSignupModal)}
+                               className={styles.signupBtn}>Sign Up
+                            </Link>
                         </div>
                     </div>
                     <div className={styles.mobileSearchField}>
                         <input type="text" placeholder="What do you want to learn?" className={styles.searchInput}/>
                         <IoSearchOutline className={styles.searchIcon}/>
                     </div>
-                    {/*----------- Category Menu -----------*/}
-                    <div className={styles.categoryMenu}>
-                        {categoryMenu && categoryMenu.map(menu => <button key={menu} className={styles.category_menu_button}>{menu}</button>)}
-                    </div>
                 </div>
-
             </div>
-
-
+            <div className="container" >
+                <div className={styles.categoryMenu}>
+                    {categoryMenu && categoryMenu.map(menu =>
+                        <button key={menu} className={styles.category_menu_button}>{menu}</button>)}
+                </div>
+            </div>
             {openMenu &&
                 <div className={styles.MenuContiner}><MobileMenu openMenu={openMenu} setOpenMenu={setOpenMenu}/></div>}
             {openLoginModal &&

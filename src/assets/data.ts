@@ -629,116 +629,117 @@ export const categoryLinks = [
 
 export const informativeData = [
         {
-            "id": 1,
-            "title": "Communication Mastery",
-            "thumbnail" : "https://cdn.ghoorilearning.com/uploads/learning/images/20230102114242-63b26ed244284.jpeg",
-            "rating": 5,
-            "students": 154,
-            "duration": "107 min",
-            "tags": [
-                "Communication Masterclass",
-                "Communication Skill",
-                "Get hired by a large company"
-            ],
-            lessons: [
-                {
-                    "id": 1,
-                    "type": "lecture",
-                    "title": "লেকচার ১ (Introduction)",
-                    "duration": "2 minutes",
-                    "status": "viewed",
-                    "icon": "icon-play"
-                },
-                {
-                    "id": 2,
-                    "type": "lecture",
-                    "title": "লেকচার ২ (Avoiding miscommunication & misunderstandings)",
-                    "duration": "6 minutes",
-                    "status": "unviewed",
-                    "icon": "icon-lock"
-                },
-                {
-                    "id": 3,
-                    "type": "quiz",
-                    "title": "Quiz -1",
-                    "duration": "minutes",
-                    "status": "unviewed",
-                    "icon": "icon-lock"
-                },
-                {
-                    "id": 4,
-                    "type": "lecture",
-                    "title": "লেকচার ৩ (Overcoming the Fear of Communication)",
-                    "duration": "5 minutes",
-                    "status": "unviewed",
-                    "icon": "icon-lock"
-                },
-                {
-                    "id": 5,
-                    "type": "lecture",
-                    "title": "লেকচার ৪ (Body Language)",
-                    "duration": "4 minutes",
-                    "status": "unviewed",
-                    "icon": "icon-lock"
-                },
-                {
-                    "id": 6,
-                    "type": "quiz",
-                    "title": "Quiz -2",
-                    "duration": "minutes",
-                    "status": "unviewed",
-                    "icon": "icon-lock"
-                },
-                {
-                    "id": 7,
-                    "type": "lecture",
-                    "title": "লেকচার ৫ (Feedback Part-1)",
-                    "duration": "3 minutes",
-                    "status": "unviewed",
-                    "icon": "icon-lock"
-                },
-                {
-                    "id": 8,
-                    "type": "lecture",
-                    "title": "লেকচার ৬ (Feedback Part-2)",
-                    "duration": "12 minutes",
-                    "status": "unviewed",
-                    "icon": "icon-lock"
-                },
-                {
-                    "id": 9,
-                    "type": "lecture",
-                    "title": "লেকচার ৭ (Feedback Part-3)",
-                    "duration": "13 minutes",
-                    "status": "unviewed",
-                    "icon": "icon-lock"
-                },
-                {
-                    "id": 10,
-                    "type": "lecture",
-                    "title": "লেকচার ৮ (Feedback Part-4)",
-                    "duration": "9 minutes",
-                    "status": "unviewed",
-                    "icon": "icon-lock"
-                }
-            ],
-            "summary": "বর্তমান সময়ে সবচেয়ে গুরুত্বপূর্ণ দক্ষতাগুলির মধ্যে একটি হল Communication Skill. কারণ, প্রতিটি মানুষের Professional Life এবং Personal Life উভয় ক্ষেত্রেই এই Skill ভাল হওয়া আবশ্যক। আর এই Communication Skill আর Public Speaking দক্ষতা যদি কারও ভাল হয়ে থাকে, তবে তার জন্য জীবনে এগিয়ে যাওয়ার রাস্তা অনেকটাই সহজ হয়ে যায়। তাই Communication Skill এর গুরুত্ব উপলব্ধি করতে পেরেই Ghoori Learning নিয়ে এলো 'Communication Mastery' নামের এই কোর্সটি।",
-            "features": [
-                "বৈশিষ্ট্য ১: এই কোর্সটিতে রয়েছে Communication Skill-এর উপর মোট ১৬টি লেসন।",
-                "বৈশিষ্ট্য ২: যারা নিজেদের communication skill improve করতে চান, তাদের জন্য এই কোর্সটি করা আবশ্যক।",
-                "বৈশিষ্ট্য ৩: এই কোর্সে রয়েছে one-to-one communication, group communication-সহ বিভিন্ন ধরণের communication নিয়ে বিস্তারিত আলোচনা।",
-                "বৈশিষ্ট্য ৪: কোন Conversation-এ কিভাবে win-win situation-এ যাওয়া যায় এবং কিভাবে perfect elevator pitch দিতে হয়, তা তুলে ধরা হয়েছে এই কোর্সে।",
-                "বৈশিষ্ট্য ৫: এই কোর্সে রয়েছে মোট ৬ সেট Quiz.",
-                "বৈশিষ্ট্য ৬: কোর্স শেষে থাকছে Ghoori Learning এবং Instructor-এর পক্ষ থেকে Communication Mastery-এর উপর একটি Certificate."
-            ],
-            "price_old": "Tk 800",
-            "price_discount": "50%",
-            "price_new": "Tk 400",
-            "actions": {
-                "buyNow": "Buy now",
-                "addToCart": "Add to cart"
+        "id": 1,
+        "title": "Communication Mastery",
+        "thumbnail" : "https://cdn.ghoorilearning.com/uploads/learning/images/20230102114242-63b26ed244284.jpeg",
+        "rating": 5,
+        "students": 154,
+        "duration": "107 min",
+        "categories": ["Graphics Design", "Freelancing", "Photoshop", "Illustrator"],
+        "tags": [
+            "Communication Masterclass",
+            "Communication Skill",
+            "Get hired by a large company"
+        ],
+        lessons: [
+            {
+                "id": 1,
+                "type": "lecture",
+                "title": "লেকচার ১ (Introduction)",
+                "duration": "2 minutes",
+                "status": "viewed",
+                "videoLink": "https://cdn.ghoorilearning.com/uploads/learning/illustrator.mp4"
+            },
+            {
+                "id": 2,
+                "type": "lecture",
+                "title": "লেকচার ২ (Avoiding miscommunication & misunderstandings)",
+                "duration": "6 minutes",
+                "status": "unviewed",
+                "icon": "icon-lock"
+            },
+            {
+                "id": 3,
+                "type": "quiz",
+                "title": "Quiz -1",
+                "duration": "minutes",
+                "status": "unviewed",
+                "icon": "icon-lock"
+            },
+            {
+                "id": 4,
+                "type": "lecture",
+                "title": "লেকচার ৩ (Overcoming the Fear of Communication)",
+                "duration": "5 minutes",
+                "status": "unviewed",
+                "icon": "icon-lock"
+            },
+            {
+                "id": 5,
+                "type": "lecture",
+                "title": "লেকচার ৪ (Body Language)",
+                "duration": "4 minutes",
+                "status": "unviewed",
+                "icon": "icon-lock"
+            },
+            {
+                "id": 6,
+                "type": "quiz",
+                "title": "Quiz -2",
+                "duration": "minutes",
+                "status": "unviewed",
+                "icon": "icon-lock"
+            },
+            {
+                "id": 7,
+                "type": "lecture",
+                "title": "লেকচার ৫ (Feedback Part-1)",
+                "duration": "3 minutes",
+                "status": "unviewed",
+                "icon": "icon-lock"
+            },
+            {
+                "id": 8,
+                "type": "lecture",
+                "title": "লেকচার ৬ (Feedback Part-2)",
+                "duration": "12 minutes",
+                "status": "unviewed",
+                "icon": "icon-lock"
+            },
+            {
+                "id": 9,
+                "type": "lecture",
+                "title": "লেকচার ৭ (Feedback Part-3)",
+                "duration": "13 minutes",
+                "status": "unviewed",
+                "icon": "icon-lock"
+            },
+            {
+                "id": 10,
+                "type": "lecture",
+                "title": "লেকচার ৮ (Feedback Part-4)",
+                "duration": "9 minutes",
+                "status": "unviewed",
+                "icon": "icon-lock"
             }
-        },
+        ],
+        "summary": "বর্তমান সময়ে সবচেয়ে গুরুত্বপূর্ণ দক্ষতাগুলির মধ্যে একটি হল Communication Skill. কারণ, প্রতিটি মানুষের Professional Life এবং Personal Life উভয় ক্ষেত্রেই এই Skill ভাল হওয়া আবশ্যক। আর এই Communication Skill আর Public Speaking দক্ষতা যদি কারও ভাল হয়ে থাকে, তবে তার জন্য জীবনে এগিয়ে যাওয়ার রাস্তা অনেকটাই সহজ হয়ে যায়। তাই Communication Skill এর গুরুত্ব উপলব্ধি করতে পেরেই Ghoori Learning নিয়ে এলো 'Communication Mastery' নামের এই কোর্সটি।",
+        "features": [
+            "বৈশিষ্ট্য ১: এই কোর্সটিতে রয়েছে Communication Skill-এর উপর মোট ১৬টি লেসন।",
+            "বৈশিষ্ট্য ২: যারা নিজেদের communication skill improve করতে চান, তাদের জন্য এই কোর্সটি করা আবশ্যক।",
+            "বৈশিষ্ট্য ৩: এই কোর্সে রয়েছে one-to-one communication, group communication-সহ বিভিন্ন ধরণের communication নিয়ে বিস্তারিত আলোচনা।",
+            "বৈশিষ্ট্য ৪: কোন Conversation-এ কিভাবে win-win situation-এ যাওয়া যায় এবং কিভাবে perfect elevator pitch দিতে হয়, তা তুলে ধরা হয়েছে এই কোর্সে।",
+            "বৈশিষ্ট্য ৫: এই কোর্সে রয়েছে মোট ৬ সেট Quiz.",
+            "বৈশিষ্ট্য ৬: কোর্স শেষে থাকছে Ghoori Learning এবং Instructor-এর পক্ষ থেকে Communication Mastery-এর উপর একটি Certificate."
+        ],
+        "price_old": "Tk 800",
+        "price_discount": "50%",
+        "price_new": "Tk 400",
+        "actions": {
+            "buyNow": "Buy now",
+            "addToCart": "Add to cart"
+        }
+    },
         {
             "id": 2,
             "title": "Learn to Speak English",
@@ -758,7 +759,7 @@ export const informativeData = [
                     "title": "লেকচার ১ (Introduction)",
                     "duration": "2 minutes",
                     "status": "viewed",
-                    "icon": "icon-play"
+                    "videoLink": "https://cdn.ghoorilearning.com/uploads/learning/illustrator.mp4"
                 },
                 {
                     "id": 2,
@@ -866,7 +867,7 @@ export const informativeData = [
                     "title": "লেকচার ১ (Introduction)",
                     "duration": "2 minutes",
                     "status": "viewed",
-                    "icon": "icon-play"
+                    "videoLink": "https://cdn.ghoorilearning.com/uploads/learning/illustrator.mp4"
                 },
                 {
                     "id": 2,
@@ -974,7 +975,7 @@ export const informativeData = [
                     "title": "লেকচার ১ (Introduction)",
                     "duration": "2 minutes",
                     "status": "viewed",
-                    "icon": "icon-play"
+                    "videoLink": "https://cdn.ghoorilearning.com/uploads/learning/illustrator.mp4"
                 },
                 {
                     "id": 2,
@@ -1211,7 +1212,7 @@ export const getPromotionData = [
                 "title": "লেকচার ১ (Introduction)",
                 "duration": "2 minutes",
                 "status": "viewed",
-                "icon": "icon-play"
+                "videoLink": "https://cdn.ghoorilearning.com/uploads/learning/illustrator.mp4"
             },
             {
                 "id": 2,
@@ -1322,7 +1323,7 @@ export const getPromotionData = [
                 "title": "লেকচার ১ (Introduction)",
                 "duration": "2 minutes",
                 "status": "viewed",
-                "icon": "icon-play"
+                "videoLink": "https://cdn.ghoorilearning.com/uploads/learning/illustrator.mp4"
             },
             {
                 "id": 2,
@@ -1430,7 +1431,7 @@ export const getPromotionData = [
                 "title": "লেকচার ১ (Introduction)",
                 "duration": "2 minutes",
                 "status": "viewed",
-                "icon": "icon-play"
+                "videoLink": "https://cdn.ghoorilearning.com/uploads/learning/illustrator.mp4"
             },
             {
                 "id": 2,
@@ -1538,7 +1539,7 @@ export const getPromotionData = [
                 "title": "লেকচার ১ (Introduction)",
                 "duration": "2 minutes",
                 "status": "viewed",
-                "icon": "icon-play"
+                "videoLink": "https://cdn.ghoorilearning.com/uploads/learning/illustrator.mp4"
             },
             {
                 "id": 2,
@@ -1649,7 +1650,7 @@ export const getUpgradeData = [
                 "title": "লেকচার ১ (Introduction)",
                 "duration": "2 minutes",
                 "status": "viewed",
-                "icon": "icon-play"
+                "videoLink": "https://cdn.ghoorilearning.com/uploads/learning/illustrator.mp4"
             },
             {
                 "id": 2,
@@ -1757,7 +1758,7 @@ export const getUpgradeData = [
                 "title": "লেকচার ১ (Introduction)",
                 "duration": "2 minutes",
                 "status": "viewed",
-                "icon": "icon-play"
+                "videoLink": "https://cdn.ghoorilearning.com/uploads/learning/illustrator.mp4"
             },
             {
                 "id": 2,
@@ -1868,7 +1869,7 @@ export const getUpgradeData = [
                 "title": "লেকচার ১ (Introduction)",
                 "duration": "2 minutes",
                 "status": "viewed",
-                "icon": "icon-play"
+                "videoLink": "https://cdn.ghoorilearning.com/uploads/learning/illustrator.mp4"
             },
             {
                 "id": 2,
@@ -1976,7 +1977,7 @@ export const getUpgradeData = [
                 "title": "লেকচার ১ (Introduction)",
                 "duration": "2 minutes",
                 "status": "viewed",
-                "icon": "icon-play"
+                "videoLink": "https://cdn.ghoorilearning.com/uploads/learning/illustrator.mp4"
             },
             {
                 "id": 2,
@@ -2087,7 +2088,7 @@ export const learnNewLanguageData = [
                 "title": "লেকচার ১ (Introduction)",
                 "duration": "2 minutes",
                 "status": "viewed",
-                "icon": "icon-play"
+                "videoLink": "https://cdn.ghoorilearning.com/uploads/learning/illustrator.mp4"
             },
             {
                 "id": 2,
@@ -2195,7 +2196,7 @@ export const learnNewLanguageData = [
                 "title": "লেকচার ১ (Introduction)",
                 "duration": "2 minutes",
                 "status": "viewed",
-                "icon": "icon-play"
+                "videoLink": "https://cdn.ghoorilearning.com/uploads/learning/illustrator.mp4"
             },
             {
                 "id": 2,
@@ -2306,7 +2307,7 @@ export const learnNewLanguageData = [
                 "title": "লেকচার ১ (Introduction)",
                 "duration": "2 minutes",
                 "status": "viewed",
-                "icon": "icon-play"
+                "videoLink": "https://cdn.ghoorilearning.com/uploads/learning/illustrator.mp4"
             },
             {
                 "id": 2,
@@ -2414,7 +2415,7 @@ export const learnNewLanguageData = [
                 "title": "লেকচার ১ (Introduction)",
                 "duration": "2 minutes",
                 "status": "viewed",
-                "icon": "icon-play"
+                "videoLink": "https://cdn.ghoorilearning.com/uploads/learning/illustrator.mp4"
             },
             {
                 "id": 2,
@@ -2524,7 +2525,7 @@ export const completeUnderAnHour = [
                 "title": "লেকচার ১ (Introduction)",
                 "duration": "2 minutes",
                 "status": "viewed",
-                "icon": "icon-play"
+                "videoLink": "https://cdn.ghoorilearning.com/uploads/learning/illustrator.mp4"
             },
             {
                 "id": 2,
@@ -2532,7 +2533,8 @@ export const completeUnderAnHour = [
                 "title": "লেকচার ২ (Avoiding miscommunication & misunderstandings)",
                 "duration": "6 minutes",
                 "status": "unviewed",
-                "icon": "icon-lock"
+                "icon": "icon-lock",
+                "videoLink": "https://cdn.ghoorilearning.com/uploads/learning/illustrator.mp4"
             },
             {
                 "id": 3,
@@ -2540,7 +2542,8 @@ export const completeUnderAnHour = [
                 "title": "Quiz -1",
                 "duration": "minutes",
                 "status": "unviewed",
-                "icon": "icon-lock"
+                "icon": "icon-lock",
+                "videoLink": "https://cdn.ghoorilearning.com/uploads/learning/illustrator.mp4"
             },
             {
                 "id": 4,
@@ -2548,7 +2551,8 @@ export const completeUnderAnHour = [
                 "title": "লেকচার ৩ (Overcoming the Fear of Communication)",
                 "duration": "5 minutes",
                 "status": "unviewed",
-                "icon": "icon-lock"
+                "icon": "icon-lock",
+                "videoLink": "https://cdn.ghoorilearning.com/uploads/learning/illustrator.mp4"
             },
             {
                 "id": 5,
@@ -2556,7 +2560,8 @@ export const completeUnderAnHour = [
                 "title": "লেকচার ৪ (Body Language)",
                 "duration": "4 minutes",
                 "status": "unviewed",
-                "icon": "icon-lock"
+                "icon": "icon-lock",
+                "videoLink": "https://cdn.ghoorilearning.com/uploads/learning/illustrator.mp4"
             },
             {
                 "id": 6,
@@ -2564,7 +2569,8 @@ export const completeUnderAnHour = [
                 "title": "Quiz -2",
                 "duration": "minutes",
                 "status": "unviewed",
-                "icon": "icon-lock"
+                "icon": "icon-lock",
+                "videoLink": "https://cdn.ghoorilearning.com/uploads/learning/illustrator.mp4"
             },
             {
                 "id": 7,
@@ -2572,7 +2578,8 @@ export const completeUnderAnHour = [
                 "title": "লেকচার ৫ (Feedback Part-1)",
                 "duration": "3 minutes",
                 "status": "unviewed",
-                "icon": "icon-lock"
+                "icon": "icon-lock",
+                "videoLink": "https://cdn.ghoorilearning.com/uploads/learning/illustrator.mp4"
             },
             {
                 "id": 8,
@@ -2580,7 +2587,8 @@ export const completeUnderAnHour = [
                 "title": "লেকচার ৬ (Feedback Part-2)",
                 "duration": "12 minutes",
                 "status": "unviewed",
-                "icon": "icon-lock"
+                "icon": "icon-lock",
+                "videoLink": "https://cdn.ghoorilearning.com/uploads/learning/illustrator.mp4"
             },
             {
                 "id": 9,
@@ -2588,7 +2596,8 @@ export const completeUnderAnHour = [
                 "title": "লেকচার ৭ (Feedback Part-3)",
                 "duration": "13 minutes",
                 "status": "unviewed",
-                "icon": "icon-lock"
+                "icon": "icon-lock",
+                "videoLink": "https://cdn.ghoorilearning.com/uploads/learning/illustrator.mp4"
             },
             {
                 "id": 10,
@@ -2596,7 +2605,8 @@ export const completeUnderAnHour = [
                 "title": "লেকচার ৮ (Feedback Part-4)",
                 "duration": "9 minutes",
                 "status": "unviewed",
-                "icon": "icon-lock"
+                "icon": "icon-lock",
+                "videoLink": "https://cdn.ghoorilearning.com/uploads/learning/illustrator.mp4"
             }
         ],
         "summary": "Learn strategies to achieve career growth and secure your next promotion.",
@@ -2625,14 +2635,14 @@ export const completeUnderAnHour = [
             "Communication Skill",
             "Get hired by a large company"
         ],
-        lessons: [
+        "lessons": [
             {
                 "id": 1,
                 "type": "lecture",
                 "title": "লেকচার ১ (Introduction)",
                 "duration": "2 minutes",
                 "status": "viewed",
-                "icon": "icon-play"
+                "videoLink": "https://cdn.ghoorilearning.com/uploads/learning/illustrator.mp4"
             },
             {
                 "id": 2,
@@ -2640,7 +2650,8 @@ export const completeUnderAnHour = [
                 "title": "লেকচার ২ (Avoiding miscommunication & misunderstandings)",
                 "duration": "6 minutes",
                 "status": "unviewed",
-                "icon": "icon-lock"
+                "icon": "icon-lock",
+                "videoLink": "https://cdn.ghoorilearning.com/uploads/learning/illustrator.mp4"
             },
             {
                 "id": 3,
@@ -2648,7 +2659,8 @@ export const completeUnderAnHour = [
                 "title": "Quiz -1",
                 "duration": "minutes",
                 "status": "unviewed",
-                "icon": "icon-lock"
+                "icon": "icon-lock",
+                "videoLink": "https://cdn.ghoorilearning.com/uploads/learning/illustrator.mp4"
             },
             {
                 "id": 4,
@@ -2656,7 +2668,8 @@ export const completeUnderAnHour = [
                 "title": "লেকচার ৩ (Overcoming the Fear of Communication)",
                 "duration": "5 minutes",
                 "status": "unviewed",
-                "icon": "icon-lock"
+                "icon": "icon-lock",
+                "videoLink": "https://cdn.ghoorilearning.com/uploads/learning/illustrator.mp4"
             },
             {
                 "id": 5,
@@ -2664,7 +2677,8 @@ export const completeUnderAnHour = [
                 "title": "লেকচার ৪ (Body Language)",
                 "duration": "4 minutes",
                 "status": "unviewed",
-                "icon": "icon-lock"
+                "icon": "icon-lock",
+                "videoLink": "https://cdn.ghoorilearning.com/uploads/learning/illustrator.mp4"
             },
             {
                 "id": 6,
@@ -2672,7 +2686,8 @@ export const completeUnderAnHour = [
                 "title": "Quiz -2",
                 "duration": "minutes",
                 "status": "unviewed",
-                "icon": "icon-lock"
+                "icon": "icon-lock",
+                "videoLink": "https://cdn.ghoorilearning.com/uploads/learning/illustrator.mp4"
             },
             {
                 "id": 7,
@@ -2680,7 +2695,8 @@ export const completeUnderAnHour = [
                 "title": "লেকচার ৫ (Feedback Part-1)",
                 "duration": "3 minutes",
                 "status": "unviewed",
-                "icon": "icon-lock"
+                "icon": "icon-lock",
+                "videoLink": "https://cdn.ghoorilearning.com/uploads/learning/illustrator.mp4"
             },
             {
                 "id": 8,
@@ -2688,7 +2704,8 @@ export const completeUnderAnHour = [
                 "title": "লেকচার ৬ (Feedback Part-2)",
                 "duration": "12 minutes",
                 "status": "unviewed",
-                "icon": "icon-lock"
+                "icon": "icon-lock",
+                "videoLink": "https://cdn.ghoorilearning.com/uploads/learning/illustrator.mp4"
             },
             {
                 "id": 9,
@@ -2696,7 +2713,8 @@ export const completeUnderAnHour = [
                 "title": "লেকচার ৭ (Feedback Part-3)",
                 "duration": "13 minutes",
                 "status": "unviewed",
-                "icon": "icon-lock"
+                "icon": "icon-lock",
+                "videoLink": "https://cdn.ghoorilearning.com/uploads/learning/illustrator.mp4"
             },
             {
                 "id": 10,
@@ -2704,7 +2722,8 @@ export const completeUnderAnHour = [
                 "title": "লেকচার ৮ (Feedback Part-4)",
                 "duration": "9 minutes",
                 "status": "unviewed",
-                "icon": "icon-lock"
+                "icon": "icon-lock",
+                "videoLink": "https://cdn.ghoorilearning.com/uploads/learning/illustrator.mp4"
             }
         ],
         "summary": "বর্তমান সময়ে সবচেয়ে গুরুত্বপূর্ণ দক্ষতাগুলির মধ্যে একটি হল Communication Skill. কারণ, প্রতিটি মানুষের Professional Life এবং Personal Life উভয় ক্ষেত্রেই এই Skill ভাল হওয়া আবশ্যক। আর এই Communication Skill আর Public Speaking দক্ষতা যদি কারও ভাল হয়ে থাকে, তবে তার জন্য জীবনে এগিয়ে যাওয়ার রাস্তা অনেকটাই সহজ হয়ে যায়। তাই Communication Skill এর গুরুত্ব উপলব্ধি করতে পেরেই Ghoori Learning নিয়ে এলো 'Communication Mastery' নামের এই কোর্সটি।",
@@ -2736,14 +2755,14 @@ export const completeUnderAnHour = [
             "Professional Growth",
             "Practical Learning"
         ],
-        lessons: [
+        "lessons": [
             {
                 "id": 1,
                 "type": "lecture",
                 "title": "লেকচার ১ (Introduction)",
                 "duration": "2 minutes",
                 "status": "viewed",
-                "icon": "icon-play"
+                "videoLink": "https://cdn.ghoorilearning.com/uploads/learning/illustrator.mp4"
             },
             {
                 "id": 2,
@@ -2751,7 +2770,8 @@ export const completeUnderAnHour = [
                 "title": "লেকচার ২ (Avoiding miscommunication & misunderstandings)",
                 "duration": "6 minutes",
                 "status": "unviewed",
-                "icon": "icon-lock"
+                "icon": "icon-lock",
+                "videoLink": "https://cdn.ghoorilearning.com/uploads/learning/illustrator.mp4"
             },
             {
                 "id": 3,
@@ -2759,7 +2779,8 @@ export const completeUnderAnHour = [
                 "title": "Quiz -1",
                 "duration": "minutes",
                 "status": "unviewed",
-                "icon": "icon-lock"
+                "icon": "icon-lock",
+                "videoLink": "https://cdn.ghoorilearning.com/uploads/learning/illustrator.mp4"
             },
             {
                 "id": 4,
@@ -2767,7 +2788,8 @@ export const completeUnderAnHour = [
                 "title": "লেকচার ৩ (Overcoming the Fear of Communication)",
                 "duration": "5 minutes",
                 "status": "unviewed",
-                "icon": "icon-lock"
+                "icon": "icon-lock",
+                "videoLink": "https://cdn.ghoorilearning.com/uploads/learning/illustrator.mp4"
             },
             {
                 "id": 5,
@@ -2775,7 +2797,8 @@ export const completeUnderAnHour = [
                 "title": "লেকচার ৪ (Body Language)",
                 "duration": "4 minutes",
                 "status": "unviewed",
-                "icon": "icon-lock"
+                "icon": "icon-lock",
+                "videoLink": "https://cdn.ghoorilearning.com/uploads/learning/illustrator.mp4"
             },
             {
                 "id": 6,
@@ -2783,7 +2806,8 @@ export const completeUnderAnHour = [
                 "title": "Quiz -2",
                 "duration": "minutes",
                 "status": "unviewed",
-                "icon": "icon-lock"
+                "icon": "icon-lock",
+                "videoLink": "https://cdn.ghoorilearning.com/uploads/learning/illustrator.mp4"
             },
             {
                 "id": 7,
@@ -2791,7 +2815,8 @@ export const completeUnderAnHour = [
                 "title": "লেকচার ৫ (Feedback Part-1)",
                 "duration": "3 minutes",
                 "status": "unviewed",
-                "icon": "icon-lock"
+                "icon": "icon-lock",
+                "videoLink": "https://cdn.ghoorilearning.com/uploads/learning/illustrator.mp4"
             },
             {
                 "id": 8,
@@ -2799,7 +2824,8 @@ export const completeUnderAnHour = [
                 "title": "লেকচার ৬ (Feedback Part-2)",
                 "duration": "12 minutes",
                 "status": "unviewed",
-                "icon": "icon-lock"
+                "icon": "icon-lock",
+                "videoLink": "https://cdn.ghoorilearning.com/uploads/learning/illustrator.mp4"
             },
             {
                 "id": 9,
@@ -2807,7 +2833,8 @@ export const completeUnderAnHour = [
                 "title": "লেকচার ৭ (Feedback Part-3)",
                 "duration": "13 minutes",
                 "status": "unviewed",
-                "icon": "icon-lock"
+                "icon": "icon-lock",
+                "videoLink": "https://cdn.ghoorilearning.com/uploads/learning/illustrator.mp4"
             },
             {
                 "id": 10,
@@ -2815,7 +2842,8 @@ export const completeUnderAnHour = [
                 "title": "লেকচার ৮ (Feedback Part-4)",
                 "duration": "9 minutes",
                 "status": "unviewed",
-                "icon": "icon-lock"
+                "icon": "icon-lock",
+                "videoLink": "https://cdn.ghoorilearning.com/uploads/learning/illustrator.mp4"
             }
         ],
         "summary": "Upgrade your skills to remain competitive in the ever-changing job market.",
@@ -2844,14 +2872,14 @@ export const completeUnderAnHour = [
             "Speaking Fluency",
             "Professional Communication"
         ],
-        lessons: [
+        "lessons": [
             {
                 "id": 1,
                 "type": "lecture",
                 "title": "লেকচার ১ (Introduction)",
                 "duration": "2 minutes",
                 "status": "viewed",
-                "icon": "icon-play"
+                "videoLink": "https://cdn.ghoorilearning.com/uploads/learning/illustrator.mp4"
             },
             {
                 "id": 2,
@@ -2859,7 +2887,8 @@ export const completeUnderAnHour = [
                 "title": "লেকচার ২ (Avoiding miscommunication & misunderstandings)",
                 "duration": "6 minutes",
                 "status": "unviewed",
-                "icon": "icon-lock"
+                "icon": "icon-lock",
+                "videoLink": "https://cdn.ghoorilearning.com/uploads/learning/illustrator.mp4"
             },
             {
                 "id": 3,
@@ -2867,7 +2896,8 @@ export const completeUnderAnHour = [
                 "title": "Quiz -1",
                 "duration": "minutes",
                 "status": "unviewed",
-                "icon": "icon-lock"
+                "icon": "icon-lock",
+                "videoLink": "https://cdn.ghoorilearning.com/uploads/learning/illustrator.mp4"
             },
             {
                 "id": 4,
@@ -2875,7 +2905,8 @@ export const completeUnderAnHour = [
                 "title": "লেকচার ৩ (Overcoming the Fear of Communication)",
                 "duration": "5 minutes",
                 "status": "unviewed",
-                "icon": "icon-lock"
+                "icon": "icon-lock",
+                "videoLink": "https://cdn.ghoorilearning.com/uploads/learning/illustrator.mp4"
             },
             {
                 "id": 5,
@@ -2883,7 +2914,8 @@ export const completeUnderAnHour = [
                 "title": "লেকচার ৪ (Body Language)",
                 "duration": "4 minutes",
                 "status": "unviewed",
-                "icon": "icon-lock"
+                "icon": "icon-lock",
+                "videoLink": "https://cdn.ghoorilearning.com/uploads/learning/illustrator.mp4"
             },
             {
                 "id": 6,
@@ -2891,7 +2923,8 @@ export const completeUnderAnHour = [
                 "title": "Quiz -2",
                 "duration": "minutes",
                 "status": "unviewed",
-                "icon": "icon-lock"
+                "icon": "icon-lock",
+                "videoLink": "https://cdn.ghoorilearning.com/uploads/learning/illustrator.mp4"
             },
             {
                 "id": 7,
@@ -2899,7 +2932,8 @@ export const completeUnderAnHour = [
                 "title": "লেকচার ৫ (Feedback Part-1)",
                 "duration": "3 minutes",
                 "status": "unviewed",
-                "icon": "icon-lock"
+                "icon": "icon-lock",
+                "videoLink": "https://cdn.ghoorilearning.com/uploads/learning/illustrator.mp4"
             },
             {
                 "id": 8,
@@ -2907,7 +2941,8 @@ export const completeUnderAnHour = [
                 "title": "লেকচার ৬ (Feedback Part-2)",
                 "duration": "12 minutes",
                 "status": "unviewed",
-                "icon": "icon-lock"
+                "icon": "icon-lock",
+                "videoLink": "https://cdn.ghoorilearning.com/uploads/learning/illustrator.mp4"
             },
             {
                 "id": 9,
@@ -2915,7 +2950,8 @@ export const completeUnderAnHour = [
                 "title": "লেকচার ৭ (Feedback Part-3)",
                 "duration": "13 minutes",
                 "status": "unviewed",
-                "icon": "icon-lock"
+                "icon": "icon-lock",
+                "videoLink": "https://cdn.ghoorilearning.com/uploads/learning/illustrator.mp4"
             },
             {
                 "id": 10,
@@ -2923,7 +2959,8 @@ export const completeUnderAnHour = [
                 "title": "লেকচার ৮ (Feedback Part-4)",
                 "duration": "9 minutes",
                 "status": "unviewed",
-                "icon": "icon-lock"
+                "icon": "icon-lock",
+                "videoLink": "https://cdn.ghoorilearning.com/uploads/learning/illustrator.mp4"
             }
         ],
         "summary": "Improve your English speaking skills to achieve professional and personal growth.",
@@ -2952,14 +2989,14 @@ export const completeUnderAnHour = [
             "Speaking Fluency",
             "Professional Communication"
         ],
-        lessons: [
+        "lessons": [
             {
                 "id": 1,
                 "type": "lecture",
                 "title": "লেকচার ১ (Introduction)",
                 "duration": "2 minutes",
                 "status": "viewed",
-                "icon": "icon-play"
+                "videoLink": "https://cdn.ghoorilearning.com/uploads/learning/illustrator.mp4"
             },
             {
                 "id": 2,
@@ -2967,7 +3004,8 @@ export const completeUnderAnHour = [
                 "title": "লেকচার ২ (Avoiding miscommunication & misunderstandings)",
                 "duration": "6 minutes",
                 "status": "unviewed",
-                "icon": "icon-lock"
+                "icon": "icon-lock",
+                "videoLink": "https://cdn.ghoorilearning.com/uploads/learning/illustrator.mp4"
             },
             {
                 "id": 3,
@@ -2975,7 +3013,8 @@ export const completeUnderAnHour = [
                 "title": "Quiz -1",
                 "duration": "minutes",
                 "status": "unviewed",
-                "icon": "icon-lock"
+                "icon": "icon-lock",
+                "videoLink": "https://cdn.ghoorilearning.com/uploads/learning/illustrator.mp4"
             },
             {
                 "id": 4,
@@ -2983,7 +3022,8 @@ export const completeUnderAnHour = [
                 "title": "লেকচার ৩ (Overcoming the Fear of Communication)",
                 "duration": "5 minutes",
                 "status": "unviewed",
-                "icon": "icon-lock"
+                "icon": "icon-lock",
+                "videoLink": "https://cdn.ghoorilearning.com/uploads/learning/illustrator.mp4"
             },
             {
                 "id": 5,
@@ -2991,7 +3031,8 @@ export const completeUnderAnHour = [
                 "title": "লেকচার ৪ (Body Language)",
                 "duration": "4 minutes",
                 "status": "unviewed",
-                "icon": "icon-lock"
+                "icon": "icon-lock",
+                "videoLink": "https://cdn.ghoorilearning.com/uploads/learning/illustrator.mp4"
             },
             {
                 "id": 6,
@@ -2999,7 +3040,8 @@ export const completeUnderAnHour = [
                 "title": "Quiz -2",
                 "duration": "minutes",
                 "status": "unviewed",
-                "icon": "icon-lock"
+                "icon": "icon-lock",
+                "videoLink": "https://cdn.ghoorilearning.com/uploads/learning/illustrator.mp4"
             },
             {
                 "id": 7,
@@ -3007,7 +3049,8 @@ export const completeUnderAnHour = [
                 "title": "লেকচার ৫ (Feedback Part-1)",
                 "duration": "3 minutes",
                 "status": "unviewed",
-                "icon": "icon-lock"
+                "icon": "icon-lock",
+                "videoLink": "https://cdn.ghoorilearning.com/uploads/learning/illustrator.mp4"
             },
             {
                 "id": 8,
@@ -3015,7 +3058,8 @@ export const completeUnderAnHour = [
                 "title": "লেকচার ৬ (Feedback Part-2)",
                 "duration": "12 minutes",
                 "status": "unviewed",
-                "icon": "icon-lock"
+                "icon": "icon-lock",
+                "videoLink": "https://cdn.ghoorilearning.com/uploads/learning/illustrator.mp4"
             },
             {
                 "id": 9,
@@ -3023,7 +3067,8 @@ export const completeUnderAnHour = [
                 "title": "লেকচার ৭ (Feedback Part-3)",
                 "duration": "13 minutes",
                 "status": "unviewed",
-                "icon": "icon-lock"
+                "icon": "icon-lock",
+                "videoLink": "https://cdn.ghoorilearning.com/uploads/learning/illustrator.mp4"
             },
             {
                 "id": 10,
@@ -3031,7 +3076,8 @@ export const completeUnderAnHour = [
                 "title": "লেকচার ৮ (Feedback Part-4)",
                 "duration": "9 minutes",
                 "status": "unviewed",
-                "icon": "icon-lock"
+                "icon": "icon-lock",
+                "videoLink": "https://cdn.ghoorilearning.com/uploads/learning/illustrator.mp4"
             }
         ],
         "summary": "Improve your English speaking skills to achieve professional and personal growth.",
@@ -3060,14 +3106,14 @@ export const completeUnderAnHour = [
             "Speaking Fluency",
             "Professional Communication"
         ],
-        lessons: [
+        "lessons": [
             {
                 "id": 1,
                 "type": "lecture",
                 "title": "লেকচার ১ (Introduction)",
                 "duration": "2 minutes",
                 "status": "viewed",
-                "icon": "icon-play"
+                "videoLink": "https://cdn.ghoorilearning.com/uploads/learning/illustrator.mp4"
             },
             {
                 "id": 2,
@@ -3075,7 +3121,8 @@ export const completeUnderAnHour = [
                 "title": "লেকচার ২ (Avoiding miscommunication & misunderstandings)",
                 "duration": "6 minutes",
                 "status": "unviewed",
-                "icon": "icon-lock"
+                "icon": "icon-lock",
+                "videoLink": "https://cdn.ghoorilearning.com/uploads/learning/illustrator.mp4"
             },
             {
                 "id": 3,
@@ -3083,7 +3130,8 @@ export const completeUnderAnHour = [
                 "title": "Quiz -1",
                 "duration": "minutes",
                 "status": "unviewed",
-                "icon": "icon-lock"
+                "icon": "icon-lock",
+                "videoLink": "https://cdn.ghoorilearning.com/uploads/learning/illustrator.mp4"
             },
             {
                 "id": 4,
@@ -3091,7 +3139,8 @@ export const completeUnderAnHour = [
                 "title": "লেকচার ৩ (Overcoming the Fear of Communication)",
                 "duration": "5 minutes",
                 "status": "unviewed",
-                "icon": "icon-lock"
+                "icon": "icon-lock",
+                "videoLink": "https://cdn.ghoorilearning.com/uploads/learning/illustrator.mp4"
             },
             {
                 "id": 5,
@@ -3099,7 +3148,8 @@ export const completeUnderAnHour = [
                 "title": "লেকচার ৪ (Body Language)",
                 "duration": "4 minutes",
                 "status": "unviewed",
-                "icon": "icon-lock"
+                "icon": "icon-lock",
+                "videoLink": "https://cdn.ghoorilearning.com/uploads/learning/illustrator.mp4"
             },
             {
                 "id": 6,
@@ -3107,7 +3157,8 @@ export const completeUnderAnHour = [
                 "title": "Quiz -2",
                 "duration": "minutes",
                 "status": "unviewed",
-                "icon": "icon-lock"
+                "icon": "icon-lock",
+                "videoLink": "https://cdn.ghoorilearning.com/uploads/learning/illustrator.mp4"
             },
             {
                 "id": 7,
@@ -3115,7 +3166,8 @@ export const completeUnderAnHour = [
                 "title": "লেকচার ৫ (Feedback Part-1)",
                 "duration": "3 minutes",
                 "status": "unviewed",
-                "icon": "icon-lock"
+                "icon": "icon-lock",
+                "videoLink": "https://cdn.ghoorilearning.com/uploads/learning/illustrator.mp4"
             },
             {
                 "id": 8,
@@ -3123,7 +3175,8 @@ export const completeUnderAnHour = [
                 "title": "লেকচার ৬ (Feedback Part-2)",
                 "duration": "12 minutes",
                 "status": "unviewed",
-                "icon": "icon-lock"
+                "icon": "icon-lock",
+                "videoLink": "https://cdn.ghoorilearning.com/uploads/learning/illustrator.mp4"
             },
             {
                 "id": 9,
@@ -3131,7 +3184,8 @@ export const completeUnderAnHour = [
                 "title": "লেকচার ৭ (Feedback Part-3)",
                 "duration": "13 minutes",
                 "status": "unviewed",
-                "icon": "icon-lock"
+                "icon": "icon-lock",
+                "videoLink": "https://cdn.ghoorilearning.com/uploads/learning/illustrator.mp4"
             },
             {
                 "id": 10,
@@ -3139,7 +3193,8 @@ export const completeUnderAnHour = [
                 "title": "লেকচার ৮ (Feedback Part-4)",
                 "duration": "9 minutes",
                 "status": "unviewed",
-                "icon": "icon-lock"
+                "icon": "icon-lock",
+                "videoLink": "https://cdn.ghoorilearning.com/uploads/learning/illustrator.mp4"
             }
         ],
         "summary": "Improve your English speaking skills to achieve professional and personal growth.",
@@ -3182,4 +3237,15 @@ export const customerFeedback = [
                 "image": "https://cdn.ghoorilearning.com/uploads/cms/4-63284a7f9b3f1.jpg",
                 "feedback": "Best Platform for learning. I recommend it to my classmates and my friends. It helps me a lot to enrich my knowledge and to test my learning skills. Thank you Ghoori Learning."
             }
+]
+
+export const categoryMenu = [
+    "Graphics Design",
+    "Language Courses",
+    "Web Design",
+    "Photography",
+    "Data Entry",
+    "English Learning",
+    "IELTS",
+    "Digital Marketing"
 ]

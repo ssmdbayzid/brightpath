@@ -1,3 +1,4 @@
+'use client'
 import styles from './NewlyAddedCourseComponent.module.scss'
 import {useSwiper} from "swiper/react";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";

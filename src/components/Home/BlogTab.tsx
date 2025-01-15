@@ -30,7 +30,7 @@ const blogData = [
 ]
 export default async function BlogTab() {
     return (
-        <div className="container">
+        <div className="container section">
         <div className={styles.heading}>
             <h1 className={styles.title}>Goal based courses</h1>
             <p>Over 200 affordable courses to empower your future.</p>

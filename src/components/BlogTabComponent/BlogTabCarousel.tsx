@@ -12,6 +12,7 @@ import {FaStar} from "react-icons/fa6";
 import React from "react";
 import loading from "@/assets/image/loader-ghoori.svg"
 import BlogCartButtonComponent from "@/components/BlogTabComponent/BlogCartButtonComponent";
+import Link from "next/link";
 
 export default function BlogTabCarousel ({courses}) {
     return <div>
@@ -19,7 +20,7 @@ export default function BlogTabCarousel ({courses}) {
             <Swiper className={styles.swiper}>
 
                 {courses && courses.map((item, index) => <SwiperSlide key={index}><div className={styles.card}>
-                        <a href={`/courses/${item.title}`}><Image src={item.thumbnail} className={styles.thumbnail} width={400} height={300} alt="Thumbnail" /></a>
+                        <Link href={`/courses/${item.title}`}><Image src={item.thumbnail} className={styles.thumbnail} width={400} height={300} alt="Thumbnail" /></Link>
                         <div className={styles.cardContent}>
                             <h3 className={styles.title}>{item.title}</h3>
                             <div className={styles.ratingCount}>

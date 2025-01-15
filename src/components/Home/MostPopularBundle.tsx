@@ -2,9 +2,10 @@
 import styles from "./MostPopularBundle.module.scss"
 import {Course} from "@/components/Courses/Course";
 import Popular_Course_Carousel from "@/components/Home/Popular_Course_Carousel";
+import Link from "next/link";
 
  const getAllCourses = async () => {
-     const data = await fetch(`${process.env.API_URL}/api/course`);
+     const data = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/course`);
      const courses = await data.json();
      return courses ? courses : null;
  }
@@ -12,13 +13,13 @@ import Popular_Course_Carousel from "@/components/Home/Popular_Course_Carousel";
 export default async function MostPopularBundle() {
     const courses = await getAllCourses()
 
-    
+    console.log(courses)
     return (
         <div className="">
-            <div className="container">
-                <div className={styles.titleContainer}>
-                    <h1>Most Popular Bundle</h1>
-                    <a href="/bundles" className="btn">All</a>
+            <div className="container ">
+                <div className={` ${styles.titleContainer}`}>
+                    <h1>Most Popular Courses</h1>
+                    <Link href="/bundles" className="btn">All</Link>
                 </div>
                 <div>
                 {courses && <Popular_Course_Carousel courses={courses} />}

@@ -25,13 +25,12 @@ export default function  CardPage (){
         return total;
     }
 
-    return <div className="container">
+    return <div className="container section">
         {cart.length === 0 ? <h2>Empty Cart Items..</h2> :
             <div>
             <div className={styles.header}>
                 <h2>Shopping Cart Page</h2>
                 <h4>{cart.length} courses in cart</h4>
-                <hr/>
             </div>
                 <div className={styles.contents}>
                 <div className={styles.cartArea}>
@@ -51,6 +50,9 @@ export default function  CardPage (){
                             <button>Save for later</button>
                             </div>
                         </div> )}
+                    <div className={styles.title2}>
+                        <h2>Saved for later</h2>
+                    </div>
                 </div>
                     <div className={styles.cartSummary}>
                         <ul className={styles.list}>

@@ -1,6 +1,7 @@
 import styles from "@/app/(pages)/all-courses/[id]/CourseDetails.module.scss";
 import {addToCart} from "@/store/features/cartSlice";
 import {useDispatch} from "react-redux";
+import Link from "next/link";
 
 export const AddToCartButton ({course}) => {
     const dispatch = useDispatch()
@@ -11,8 +12,8 @@ export const AddToCartButton ({course}) => {
         >
             Add to cart
         </button>
-        <a href={`/bundles`} className={styles.btn2}>
+        <Link href={`/bundles`} className={styles.btn2}>
             Share & Earn
-        </a>
+        </Link>
     </div>
 }

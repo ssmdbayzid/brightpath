@@ -1,6 +1,5 @@
 import HeroSection from "@/components/Home/HeroSection";
 import PopularCourse from "@/components/Home/PopularCourse";
-import Footer from "@/components/layout/Footer";
 
 import MostPopularBundle from "@/components/Home/MostPopularBundle";
 import AllCategory from "@/components/Home/AllCategory";
@@ -11,6 +10,7 @@ import QuizBanner from "@/components/Home/QuizBanner";
 import CustomerFeedback from "@/components/Home/CustomerFeedback";
 import BecomeATeacher from "@/components/Home/BecomeATeacher";
 import Partner from "@/components/Home/Partner";
+import Loader from "@/components/Common/Loader";
 
 
 export default function Home() {
@@ -19,8 +19,8 @@ export default function Home() {
     return (
    <div className="">
      <HeroSection />
-       {/* <MostPopularBundle /> */}
-       {/* <PopularCourse /> */}
+        <MostPopularBundle />
+        <PopularCourse />
         <AllCategory/>
        <BlogTab />
        <NewAddedCourse />
@@ -29,7 +29,7 @@ export default function Home() {
        <CustomerFeedback />
        <BecomeATeacher />
        <Partner />
-       <Footer />
    </div>
+
   );
 }

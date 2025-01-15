@@ -3,7 +3,10 @@
 
 .header {
   background-color: $white;
-  position: relative;
+  position: fixed;
+  width: 100%;
+  padding-top: 5px;
+  z-index: 999;
 }
 .mobileSearchField {
   position: relative;
@@ -18,9 +21,9 @@
   }
   .searchIcon {
     position: absolute;
-    color: $primary-color;
     right: 10px;
     font-size: 20px;
+    cursor: pointer;
   }
 }
 
@@ -40,7 +43,6 @@
   gap: 30px;
   font-size: 17px;
 
-
   ul {
     list-style: none;
     display: flex;
@@ -54,19 +56,39 @@
   position: relative;
   display: flex;
   align-items: center;
-  width:40%;
+  width:20%;
+  .searchForm{
+    button{
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+    }
+  }
+
   .searchInput {
     width: 100%;
     padding: 10px 20px;
     border-radius: 50px;
     outline: none;
-    border: 1px solid $primary-color;
+    border: none;
+    font-size: 18px;
+    background: transparent;
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus {
+      background-color: transparent !important; // Override background
+      color: inherit !important;              // Match input text color
+      -webkit-box-shadow: 0 0 0px 1000px transparent inset !important; // Remove autofill background
+      transition: background-color 5000s ease-in-out 0s !important;   // Smooth transition
+    }
   }
   .searchIcon {
     position: absolute;
-    color: $primary-color;
+    top: 10px;
     right: 10px;
     font-size: 20px;
+    cursor: pointer;
   }
 }
 
@@ -74,15 +96,20 @@
   display: flex;
   align-items: center;
   gap: 20px;
-
+  .lenuageButton{
+    outline: none;
+    border: none;
+    font-weight: 600;
+    background: transparent;
+  }
   .loginBtn {
-    background-color: $primary-color;
-    border: 1px solid $primary-color;
-    color: $white;
+
+    color: $black;
     padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
-
+    outline:none;
+    font-weight: 600;
     &:hover {
       background-color: $primary-color;
       color: $white;
@@ -131,8 +158,9 @@
   right: 0;
   background-color: $white;
   width: 100%;
-  z-index: 1000;
+  z-index: 9999;
   padding: 10px 20px;
+
 }
 .dropdown{
   position: relative;
@@ -152,12 +180,15 @@
     }
   }
 }
+
 //------------------- Category Menu ------------
 .categoryMenu {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 10px;
+  justify-content: space-around;
+  gap: 5px;
+  padding: 100px 0 20px;
+
   .category_menu_button{
     background: none;
     font-size: 16px;
@@ -167,12 +198,13 @@
     cursor: pointer;
     margin:0;
     transition: all 0.3s linear;
-    padding: 8px 10px;
+    padding: 8px 12px;
     border-radius: 6px;
     display:inline-block;
     border: 1px solid $black;
   }
 }
+
 
 @media screen and (max-width: 768px){
   .container{padding: 5px 20px}
@@ -180,10 +212,20 @@
   .searchField{display: none}
   .icon{font-size: 25px;}
   .shopping{.cartIcon{font-size: 35px;}}
-  .mobileSearchField{display: flex; width: 100%;}
+  .mobileSearchField{display: flex; width: 100%; margin: 10px 0 0}
   .btnContainer{.loginBtn {padding: 10px 15px;}}
   .headerContent{gap:5px;}
   .categoryMenu{display: none}
+  .logo{
+    width: 150px;
+  }
+  .lenuageButton{display: none}
+  .signupBtn{display: none}
+  .loginBtn{
+    color: $white!important;
+    background-color: $primary-color;
+    padding: 2px 8px;
+  }
 }
 @media screen and (min-width: 768px){
   .icon{display: none}

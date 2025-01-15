@@ -40,7 +40,7 @@ const partners = [
 ]
 export default function Partner(){
     return (
-        <div className="container">
+        <div className="container section">
             <Swiper
                 slidesPerView={5}
                 spaceBetween={20}
