@@ -3,7 +3,7 @@ import styles from './Categories.module.scss';
 import { courseData } from "@/assets/data";
 import Image from "next/image";
 import React, { useRef } from "react";
-import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { Swiper as SwiperType } from "swiper";
 import "swiper/css";
 import {IoIosArrowBack, IoIosArrowForward} from "react-icons/io";

@@ -1,7 +1,7 @@
 import styles from "./FilteredCourse.module.scss";
 import Image from "next/image";
 import {FaStar} from "react-icons/fa6";
-import {CartButtons} from "@/components/Courses/CartButtons";
+
 import React from "react";
 import ActionButtons from "@/app/(pages)/categories/[tag]/ActionButtons";
 import Link from "next/link";

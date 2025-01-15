@@ -1,5 +1,5 @@
 import {connectDb} from "@/lib/config";
-import {NextRequest, NextResponse} from "next/server";
+import { NextResponse} from "next/server";
 import Course from "@/lib/model/courseModel";
 
 

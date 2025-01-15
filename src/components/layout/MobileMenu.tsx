@@ -2,7 +2,6 @@
 import styles from "../../styles/components/Layout/MenuIcon.module.scss"
 import logo from "../../assets/image/logo.png"
 import Image from "next/image";
-import { RiMenuFill } from "react-icons/ri";
 import { RxCross2 } from "react-icons/rx";
 import { IoIosArrowDown } from "react-icons/io";
 import {useState} from "react";

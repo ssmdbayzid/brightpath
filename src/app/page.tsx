@@ -10,7 +10,7 @@ import QuizBanner from "@/components/Home/QuizBanner";
 import CustomerFeedback from "@/components/Home/CustomerFeedback";
 import BecomeATeacher from "@/components/Home/BecomeATeacher";
 import Partner from "@/components/Home/Partner";
-import Loader from "@/components/Common/Loader";
+
 
 
 export default function Home() {

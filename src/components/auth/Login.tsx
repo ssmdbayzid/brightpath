@@ -31,7 +31,7 @@ export const Login = ({openLoginModal, setOpenLoginModal, openSignupModal, setOp
             <input type="password" placeholder="Password" className={styles.input}/>
             <Link href="#">Forget Password?</Link>
             <button>Log In</button>
-            <Link onClick={()=>{}} href="#" className={styles.link}>Don't have an account? <span onClick={handleSwitch}>Sign up</span></Link>
+            <Link onClick={()=>{}} href="#" className={styles.link}>Dont have an account? <span onClick={handleSwitch}>Sign up</span></Link>
         </form>
     </Modal>
 }

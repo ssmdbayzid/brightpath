@@ -1,14 +1,10 @@
-
-import {requestRouteCacheEntryFromCache} from "next/dist/client/components/segment-cache/cache";
-import {NextRequest} from "next/server";
-
-export const getSingleCourse = async (courseId: string) => {
+/*export const getSingleCourse = async (courseId: string) => {
 
     const data = await fetch('/api/course/'+courseId)
     const course = await data.json()
     return course;
 }
-
+*/
 
 export const fetchCourses = async (page, keyword) => {
     try {

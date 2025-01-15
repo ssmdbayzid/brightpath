@@ -2,15 +2,15 @@
 
 import styles from "../../styles/components/Layout/Header.module.scss";
 import Image from "next/image";
-import logo from "../../assets/image/logo.png";
+
 import {MdKeyboardArrowDown} from "react-icons/md";
 import {IoSearchOutline} from "react-icons/io5";
-import {MdOutlineShoppingCart} from "react-icons/md";
+
 import {RiMenuFill} from "react-icons/ri";
-import {RxCross2} from "react-icons/rx";
+
 import {useState, useEffect} from "react";
 import MobileMenu from "@/components/layout/MobileMenu";
-import {Modal} from 'react-responsive-modal';
+
 
 
 import {useSelector} from "react-redux";
@@ -32,7 +32,7 @@ export default function Header() {
     const [openLoginModal, setOpenLoginModal] = useState(false);
     const [openSignupModal, setOpenSignupModal] = useState(false);
     // Safely access the cart items
-    const cartItems = useSelector((state: any) => state.cart.cart);
+    const cartItems = useSelector((state: any) => state?.cart?.cart);
 
     // Optional: Debug the cart items
     useEffect(() => {

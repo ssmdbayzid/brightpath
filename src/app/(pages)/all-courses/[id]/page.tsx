@@ -2,10 +2,8 @@
 import styles from './CourseDetails.module.scss';
 import Image from "next/image";
 import { FaStar } from 'react-icons/fa';
-import { FiUsers } from 'react-icons/fi';
 import CourseFeatures from "@/app/(pages)/all-courses/[id]/_components/CourseFeatures";
-import {getCourse, getSingleCourse} from "@/lib/actions/Course/CourseAction";
-import {CartButtons} from "@/components/Courses/CartButtons";
+import {getCourse} from "@/lib/actions/Course/CourseAction";
 import CourseDetailsActionButtons from './_components/CourseDetailsActionButtons'
 import { LuClock3 } from "react-icons/lu";
 import Paragraph from "@/app/(pages)/all-courses/[id]/_components/Paragraph";

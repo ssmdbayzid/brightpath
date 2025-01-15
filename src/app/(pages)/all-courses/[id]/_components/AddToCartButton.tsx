@@ -3,7 +3,7 @@ import {addToCart} from "@/store/features/cartSlice";
 import {useDispatch} from "react-redux";
 import Link from "next/link";
 
-export const AddToCartButton ({course}) => {
+export default function AddToCartButton ({course}) {
     const dispatch = useDispatch()
     return <div className={styles.actionbtns}>
         <button

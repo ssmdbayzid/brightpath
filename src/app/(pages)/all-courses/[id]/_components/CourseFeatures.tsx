@@ -5,7 +5,7 @@ import {useState} from "react";
 
 export default function CourseFeatures({course}) {
     const [open, setOpen] = useState(false);
-    const [selectedVideo, setSelectedVideo] = useState("");
+    const [ setSelectedVideo] = useState("");
 
     return (
         <div className={`section ${styles.featuresArea}`}>

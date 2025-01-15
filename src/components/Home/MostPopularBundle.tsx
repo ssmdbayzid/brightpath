@@ -1,6 +1,5 @@
 
 import styles from "./MostPopularBundle.module.scss"
-import {Course} from "@/components/Courses/Course";
 import Popular_Course_Carousel from "@/components/Home/Popular_Course_Carousel";
 import Link from "next/link";
 

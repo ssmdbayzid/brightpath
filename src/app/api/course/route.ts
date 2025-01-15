@@ -12,7 +12,7 @@ const connectedDB = async()  =>{
 connectedDB().catch(err=>console.log(err))
 
 
-export async function GET(req:NextRequest, res){
+export async function GET(req:NextRequest,){
     const searchParams = req.nextUrl.searchParams;
     const pageNumber = parseInt(searchParams.get("page") || "1", 10);
     const keyword = searchParams.get("keyword");

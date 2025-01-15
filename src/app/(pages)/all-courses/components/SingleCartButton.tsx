@@ -1,3 +1,3 @@
-export default function SingleCartButton({course}){
+export default function SingleCartButton(){
     return <div>Buttons</div>
 }

@@ -1,7 +1,5 @@
-import {learningEnglistData} from "@/assets/data";
 
-
-export default function LearningEnglish({learningEnglistData}){
+export default function LearningEnglish(){
 
     return <div>sadfsadfs</div>
 }

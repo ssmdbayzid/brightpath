@@ -18,8 +18,8 @@ export async function GET(req:NextRequest, {params}: {params:{id:string}}){
         const course = await Course.findById(id);
 
         return NextResponse.json({success:true, data:course});
-}catch(error){}
-    return NextResponse.json({message: error.message});
+}catch(){}
+    return NextResponse.json({message: error?.message});
 
 }
 

@@ -1,5 +1,5 @@
 import {completeUnderAnHour} from "@/assets/data";
-import {SwiperSlide} from "swiper/react";
+
 import styles from "@/components/Home/PopularCourseCarousel.module.scss";
 import Image from "next/image";
 import {FaStar} from "react-icons/fa6";

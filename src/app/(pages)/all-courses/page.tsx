@@ -2,8 +2,7 @@
 
 import styles from './allCourses.module.scss';
 import SingleCourseCard from "@/app/(pages)/all-courses/components/SingleCourseCard";
-import Image from "next/image";
-import loader from "@/assets/image/loader-ghoori.svg";
+
 import { fetchCourses } from "@/lib/actions/Course/CourseAction";
 
 import { useSearchParams, useRouter } from 'next/navigation';

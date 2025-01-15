@@ -1,6 +1,4 @@
 import styles from './HeroSection.module.scss';
-import Image from "next/image";
-import heroImg from '../../assets/image/hero-image.png';
 import Link from "next/link";
 
 
