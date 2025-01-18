@@ -1,5 +1,5 @@
 import {connectDb} from "@/lib/config";
-import { NextResponse} from "next/server";
+import {NextRequest, NextResponse} from "next/server";
 import Course from "@/lib/model/courseModel";
 
 
@@ -7,12 +7,12 @@ const connectedDB = async()=>{
     try {
         await connectDb()
     }catch(error){
-        console.log(error.message);
+        console.log(error instanceof Error ? error.message : "An unknown error occurred");
     }
 }
 connectedDB().catch((error)=>console.log(error.message));
 
-export async function GET(req:any, ){
+export async function GET(req:NextRequest, ){
     try {
 
      const params = req.nextUrl.pathname.split("/").pop();
@@ -26,7 +26,8 @@ export async function GET(req:any, ){
      ])
         return NextResponse.json({success:true, message: "Course founded", data: courses});
     }catch(error){
-        return NextResponse.json({success:false, message: error.message});
+        const errorMessage = error instanceof Error ? error.message : "An unknown error occurred";
+        return NextResponse.json({ success: false, error: errorMessage });
     }
 
 }

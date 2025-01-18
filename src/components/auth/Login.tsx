@@ -1,7 +1,8 @@
 import { Modal } from 'react-responsive-modal';
 import styles from './LoginStyles.module.scss'
 import Link from "next/link";
-export const Login = ({openLoginModal, setOpenLoginModal, openSignupModal, setOpenSignupModal,}) => {
+export const Login = ({openLoginModal, setOpenLoginModal, openSignupModal, setOpenSignupModal,}
+                      :{openLoginModal:any, setOpenLoginModal:any, openSignupModal:any, setOpenSignupModal:any}) => {
     const onCloseModal = () => {
         setOpenLoginModal(!openLoginModal);
     }

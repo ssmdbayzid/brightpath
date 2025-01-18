@@ -3,21 +3,29 @@ import styles from './CourseFeatures.module.scss';
 import {IoIosPlayCircle, IoMdLock} from "react-icons/io";
 import {useState} from "react";
 
-export default function CourseFeatures({course}) {
+
+
+type Lesson = {
+    title: string;
+    duration: string;
+    status: "view" | "unview";
+};
+
+type CourseFeaturesProps = {
+    lessons?: Lesson[];
+};
+export default function CourseFeatures({lessons}: CourseFeaturesProps) {
     const [open, setOpen] = useState(false);
-    const [ setSelectedVideo] = useState("");
 
     return (
         <div className={`section ${styles.featuresArea}`}>
             <h1 className="common-heading">Lessons in this course:</h1>
-            {course.lessons &&
-                course?.lessons?.map((lesson, index) => (
+            { lessons &&
+                lessons?.map((lesson, index) => (
                     <div key={index}
                          className={styles.lessions}
                          aria-disabled={lesson.status === "unview"}
-                         onClick={() => {lesson.status == "view" ? setOpen(!open) : setOpen(false);
-                             setSelectedVideo(lesson.videoLink)
-                         }}>
+                         onClick={() => setOpen(lesson.status == "view" ? !open : false)}>
                         {lesson.status === "view" ? <IoIosPlayCircle className={styles.viewIcon}/> :
                             <IoMdLock className={styles.icon}/>}
                         <div className={styles.content}>

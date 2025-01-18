@@ -39,7 +39,7 @@ export default function CompletedAnHour(){
 
                                 <p className={styles.summary}>
                                     {course.summary.split(" ").slice(0, 10).join(" ") + "   "}
-                                    <Link href={`/all-courses/${course._id}`}>...Show Details</Link></p>
+                                    <Link href={`/all-courses/${course.id}`}>...Show Details</Link></p>
                                 <div className={styles.priceContent}>
                                     <div className={styles.prices}>
                                         <del>{course.price_old}</del>

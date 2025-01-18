@@ -20,6 +20,7 @@ import {SignUp} from "@/components/auth/SignUp";
 import { RiShoppingCartFill } from "react-icons/ri";
 import {useRouter} from "next/navigation";
 import Link from "next/link";
+import {RootState} from "@/store/store";
 
 
 
@@ -32,7 +33,7 @@ export default function Header() {
     const [openLoginModal, setOpenLoginModal] = useState(false);
     const [openSignupModal, setOpenSignupModal] = useState(false);
     // Safely access the cart items
-    const cartItems = useSelector((state: any) => state?.cart?.cart);
+    const cartItems = useSelector((state:RootState) => state?.cart?.cart);
 
     // Optional: Debug the cart items
     useEffect(() => {
@@ -42,7 +43,7 @@ export default function Header() {
     }, [cartItems]);
 
     const router = useRouter();
-    const handleSearchCourse = async (event: any) => {
+    const handleSearchCourse = async (event) => {
         event.preventDefault();
 
             router.push(`/all-courses?keyword=${event.target.course.value}`);

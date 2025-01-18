@@ -2,19 +2,25 @@
 
 import styles from './allCourses.module.scss';
 import SingleCourseCard from "@/app/(pages)/all-courses/components/SingleCourseCard";
-
 import { fetchCourses } from "@/lib/actions/Course/CourseAction";
-
 import { useSearchParams, useRouter } from 'next/navigation';
 import { useEffect, useState } from "react";
-import {MdKeyboardDoubleArrowLeft, MdKeyboardDoubleArrowRight} from "react-icons/md";
+import { MdKeyboardDoubleArrowLeft, MdKeyboardDoubleArrowRight } from "react-icons/md";
 import Loader from "@/components/Common/Loader";
 
-
+type Course = {
+    _id: string;
+    thumbnail: string;
+    title: string;
+    price_old: string | number;
+    price_discount: string | number;
+    price_new: string | number;
+    [key: string]: any;
+};
 
 export default function AllCourses() {
     const [currentPage, setCurrentPage] = useState(1);
-    const [coursesData, setCoursesData] = useState(null);
+    const [coursesData, setCoursesData] = useState<Course[] | null>(null);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState<string | null>(null);
     const [totalPages, setTotalPages] = useState<number>(1);
@@ -24,6 +30,7 @@ export default function AllCourses() {
     const keyword = searchParams.get("keyword");
 
     const router = useRouter();
+
     useEffect(() => {
         setCurrentPage(parseInt(page || '1', 10));
     }, [page]);
@@ -36,7 +43,7 @@ export default function AllCourses() {
             try {
                 const result = await fetchCourses(currentPage, keyword);
                 if (result.success) {
-                    const { data, message, page, total, totalPages } = result.data
+                    const { data, totalPages } = result.data;
                     setCoursesData(data);
                     setTotalPages(totalPages);
                 } else {
@@ -66,7 +73,7 @@ export default function AllCourses() {
                     disabled={currentPage === 1}
                     className={styles.btn}
                 >
-                    <MdKeyboardDoubleArrowLeft size={12}/>
+                    <MdKeyboardDoubleArrowLeft size={12} />
                 </button>
                 {pages.map((page) => (
                     <button
@@ -90,22 +97,22 @@ export default function AllCourses() {
 
     return (
         <div className="container section">
-                {loading ? (
-                    <Loader />
-                ) : error ? (
-                    <p className={styles.error}>{error}</p>
-                ) : coursesData?.length > 0 ? (
-                    <div>
+            {loading ? (
+                <Loader />
+            ) : error ? (
+                <p className={styles.error}>{error}</p>
+            ) : coursesData && coursesData.length > 0 ? (
+                <div>
                     <div className={styles.contentArea}>
-                        {coursesData.map((course, index) =><SingleCourseCard key={index} course={course}/>)}
+                        {coursesData.map((course) => (
+                            <SingleCourseCard key={course._id} course={course} />
+                        ))}
                     </div>
-                        {totalPages > 1 && renderPagination()}
-                    </div>
-                        ) : ( coursesData?.length === 0 &&
-                    <>
-                        <div className={styles.notFound}>Data not found</div>
-                    </>
-                )}
+                    {totalPages > 1 && renderPagination()}
+                </div>
+            ) : (
+                <div className={styles.notFound}>Data not found</div>
+            )}
         </div>
     );
 }

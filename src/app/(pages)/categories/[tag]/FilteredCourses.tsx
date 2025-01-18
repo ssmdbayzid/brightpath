@@ -6,16 +6,34 @@ import React from "react";
 import ActionButtons from "@/app/(pages)/categories/[tag]/ActionButtons";
 import Link from "next/link";
 
-export default async function FilteredCourses({courses}) {
+
+
+type Course = {
+    _id: string;
+    thumbnail: string;
+    title: string;
+    students: number;
+    categories: string[];
+    summary: string;
+    price_old: string | number;
+    price_discount: string | number;
+    price_new: string | number;
+    [key: string]: any;
+};
+
+type CoursesListProps = {
+    courses: Course[] | null;
+};
+export default async function FilteredCourses({courses}: CoursesListProps) {
     return (
         <div className={styles.courseContainer}>
             {!courses ? <h3>Data not found</h3> :
                 courses.map((course, index) =>
                     <div key={index} className={styles.card}>
-                    <Image src={course.thumbnail} className={styles.img} width={400} height={300}
+                    <Image src={course?.thumbnail} className={styles.img} width={400} height={300}
                            alt="course-image"/>
                     <div className={styles.cardContent}>
-                        <Link href={`/all-courses/${course._id}`} className={styles.title}><h2>{course.title}</h2></Link>
+                        <Link href={`/all-courses/${course?._id}`} className={styles.title}><h2>{course.title}</h2></Link>
                         <div className={styles.remarks}>
                             <div className={styles.ratingContent}>
                                 {[...Array(5)].map((_, index) => (

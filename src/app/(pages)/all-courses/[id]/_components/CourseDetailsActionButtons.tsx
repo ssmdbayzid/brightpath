@@ -3,8 +3,14 @@ import styles from "@/app/(pages)/all-courses/[id]/CourseDetails.module.scss";
 import {addToCart} from "@/store/features/cartSlice";
 import {useDispatch} from "react-redux";
 import Link from "next/link";
+import React from "react";
 
-export default function CourseDetailsActionButtons ({course}){
+
+type ActionButtonsProps = {
+    course?: React.ReactNode;
+}
+
+export default function CourseDetailsActionButtons ({course}: ActionButtonsProps){
     const dispatch = useDispatch()
 
     return <div className={styles.actionbtns}>

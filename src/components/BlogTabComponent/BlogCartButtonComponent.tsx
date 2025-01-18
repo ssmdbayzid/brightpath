@@ -4,7 +4,11 @@ import React from "react";
 import {useDispatch} from "react-redux";
 import Link from "next/link";
 
-export default function BlogCartButtonComponent ({course}){
+type Props = {
+    course?: React.ReactNode ;
+}
+
+export default function BlogCartButtonComponent ({course}:Props){
     const dispatch = useDispatch();
     return (
             <div className={styles.actionbtns}>

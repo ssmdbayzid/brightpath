@@ -13,7 +13,7 @@ import Link from "next/link";
 import "swiper/css";
 import "swiper/css/navigation";
 
-export default function NewlyAddedCourseComponent({courses}) {
+export default function NewlyAddedCourseComponent({courses}:any) {
     const dispatch = useDispatch();
 
     return (
@@ -28,7 +28,7 @@ export default function NewlyAddedCourseComponent({courses}) {
                 className={styles.track}
             >
                 {courses &&
-                    courses.map((course, index) => (
+                    courses.map((course:any, index:number) => (
                         <SwiperSlide key={index} className={styles.slide}>
                             <div className={styles.card}>
                                 <Image
@@ -44,7 +44,7 @@ export default function NewlyAddedCourseComponent({courses}) {
                                     </Link>
                                     <div className={styles.remarks}>
                                         <div className={styles.ratingContent}>
-                                            {[...Array(5)].map((_, index) => (
+                                            {[...Array(5)].map((_:any, index:number) => (
                                                 <FaStar key={index} className={styles.ratingIcon}/>
                                             ))}
                                         </div>
@@ -54,7 +54,7 @@ export default function NewlyAddedCourseComponent({courses}) {
                                     </div>
                                     <ul className={styles.tag_list}>
                                         {course.categories &&
-                                            course.categories.map((tag, index) => (
+                                            course.categories.map((tag:any, index:number) => (
                                                 <li key={index} className={styles.carousel_tag_items}>
                                                     {tag}
                                                 </li>
@@ -84,7 +84,7 @@ export default function NewlyAddedCourseComponent({courses}) {
                                         >
                                             Add to cart
                                         </button>
-                                        <Link href="/bundles" className={styles.btn2}>
+                                        <Link href="/boundles" className={styles.btn2}>
                                             Share & Earn
                                         </Link>
                                     </div>

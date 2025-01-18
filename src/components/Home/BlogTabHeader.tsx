@@ -12,14 +12,14 @@ import {
 } from "@/assets/data";
 import BlogTabCarousel from "@/components/BlogTabComponent/BlogTabCarousel";
 
-export  function BlogTabHeader({blogData}) {
+export  function BlogTabHeader({blogData}:any) {
     const [selectedTab, setSelectedTab] = useState("Get hired by a large company")
 
 
     return <div>
         <div className={styles.header}>
         <div className={styles.goalNav}>
-            {blogData && blogData.map((item, index) =>
+            {blogData && blogData.map((item:any, index:number) =>
             <div key={index} onClick={()=>setSelectedTab(item.title)} className={`${styles.content} ${selectedTab === item.title && styles.active}`}>
                 <div className={styles.imageContainer}>
                     <Image src={item.img} height={48} width={48} alt="Tab Image"/>

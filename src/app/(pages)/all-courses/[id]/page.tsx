@@ -1,16 +1,19 @@
 
 import styles from './CourseDetails.module.scss';
 import Image from "next/image";
-import { FaStar } from 'react-icons/fa';
 import CourseFeatures from "@/app/(pages)/all-courses/[id]/_components/CourseFeatures";
 import {getCourse} from "@/lib/actions/Course/CourseAction";
 import CourseDetailsActionButtons from './_components/CourseDetailsActionButtons'
-import { LuClock3 } from "react-icons/lu";
 import Paragraph from "@/app/(pages)/all-courses/[id]/_components/Paragraph";
 import CustomerFeedback from "@/components/Home/CustomerFeedback";
 import Teacher from "@/app/(pages)/all-courses/[id]/_components/Teacher";
 import RelatedCourses from "@/app/(pages)/all-courses/[id]/_components/RelatedCourse";
 import ClassRating from "@/app/(pages)/all-courses/[id]/_components/ClassRating";
+
+
+import { FaStar } from 'react-icons/fa';
+import { LuClock3 } from "react-icons/lu";
+
 interface PageProps {
     params: Promise<{ id: string }>;
 }
@@ -53,12 +56,12 @@ export default async function SingleCourse({ params }: PageProps) {
                         </div>
                         <ul className={styles.categories}>
                             {course?.categories &&
-                                course.categories.map((category) =>
+                                course.categories.map((category:any) =>
                                     <li key={category} className={styles.categoty}>{category}</li>
                                 )
                             }
                         </ul>
-                        <Paragraph course={course}/>
+                        <Paragraph summary={course?.summary} features={course?.features}/>
                         <hr/>
                         <div className={styles.prices}>
                             <del className={styles.oldPrice}>{course.price_old}</del>
@@ -69,7 +72,7 @@ export default async function SingleCourse({ params }: PageProps) {
                     </div>
                 </div>
             </div>}
-            {course && <CourseFeatures course={course} />}
+            {course && <CourseFeatures lessons={course?.lessons} />}
             <Teacher />
             <ClassRating />
             <CustomerFeedback />

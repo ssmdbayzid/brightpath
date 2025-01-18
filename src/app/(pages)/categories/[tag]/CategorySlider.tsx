@@ -10,7 +10,7 @@ import {IoIosArrowBack, IoIosArrowForward} from "react-icons/io";
 import {Navigation} from "swiper/modules";
 import Link from "next/link";
 
-export default function CategoriesSlider({filtered}) {
+export default function CategoriesSlider({filtered}:{filtered:string}) {
     const swiperRef = useRef<SwiperType | null>(null);
     
     return (

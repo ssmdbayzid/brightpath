@@ -26,6 +26,11 @@ const store = configureStore({
     },
     preloadedState: loadState(),
 });
+// Infer the `RootState` type from the store itself
+export type RootState = ReturnType<typeof store.getState>;
+
+// Optionally, define the AppDispatch type
+export type AppDispatch = typeof store.dispatch;
 
 // Subscribe to state changes
 store.subscribe(() => {

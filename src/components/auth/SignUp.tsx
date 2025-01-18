@@ -2,7 +2,8 @@ import { Modal } from 'react-responsive-modal';
 import styles from './SignUp.module.scss'
 import Link from "next/link";
 
-export const SignUp = ({openSignupModal, setOpenSignupModal, openLoginModal, setOpenLoginModal}) => {
+export const SignUp = ({openSignupModal, setOpenSignupModal, openLoginModal, setOpenLoginModal}
+: {openSignupModal:any, setOpenSignupModal:any, openLoginModal:any, setOpenLoginModal:any}) => {
     const onCloseModal = () => {
         setOpenSignupModal(!openSignupModal);
     }

@@ -11,14 +11,14 @@ const connectedDB = async()=>{
 }
 connectedDB().catch(err=>console.log(err))
 
-export async function GET(req:NextRequest, {params}: {params:{id:string}}){
-
+export async function GET( req: NextRequest) {
     try {
-        const {id} = params;
+        const id = req.nextUrl.pathname.split('/').pop();
         const course = await Course.findById(id);
 
-        return NextResponse.json({success:true, data:course});
-}catch(error) {
-        return NextResponse.json({message: error});
+        return NextResponse.json({ success: true, data: course });
+    } catch (error) {
+        const errorMessage = error instanceof Error ? error.message : "An unknown error occurred";
+        return NextResponse.json({ success: false, error: errorMessage });
     }
 }

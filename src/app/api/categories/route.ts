@@ -18,10 +18,7 @@ export async function GET(request: Request) {
 
         console.log("keyword", keyword);
         if (!keyword) {
-            return NextResponse.json({
-                success: false,
-                message: "Keyword parameter is required",
-            }, { status: 400 });
+            return NextResponse.json({success: false, message: "Keyword parameter is required" }, { status: 400 });
         }
 
         // Search courses by keyword
@@ -36,6 +33,7 @@ export async function GET(request: Request) {
         });
     } catch (error) {
         console.error(error);
-        return NextResponse.json({ success: false, error: error.message }, { status: 500 });
+        const errorMessage = error instanceof Error ? error.message : "An unknown error occurred";
+        return NextResponse.json({ success: false, error: errorMessage });
     }
 }

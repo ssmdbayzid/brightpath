@@ -5,10 +5,24 @@ import {useEffect, useState} from "react";
 import styles from './cart.module.scss'
 import Image from "next/image";
 import {removeFromCart} from "@/store/features/cartSlice";
+import {RootState} from "@/store/store";
+
+
+
+type CartItem = {
+    _id: string;
+    title: string;
+    thumbnail: string;
+    price_old: string;
+    price_discount: string;
+    price_new: string; // Ensure this is consistently formatted as "Currency Amount"
+    [key:string]: any;
+};
+
 
 export default function  CardPage (){
-    const [cart, setCart] = useState([])
-    const cartItems = useSelector(state=>state.cart.cart)
+    const [cart, setCart] = useState<CartItem[]>([])
+    const cartItems = useSelector((state: RootState) =>state.cart.cart)
 
     const dispatch = useDispatch()
     useEffect(() => {
@@ -17,9 +31,9 @@ export default function  CardPage (){
         }
     }, [cartItems])
 
-    const getTotal = (carts)=>{
+    const getTotal = (carts:any)=>{
         let total = 0;
-        carts.forEach((item)=>{
+        carts.forEach((item:any)=>{
             total += Number(item.price_new.split(' ')[1]);
         })
         return total;

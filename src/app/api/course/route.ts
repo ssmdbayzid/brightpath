@@ -36,17 +36,27 @@ export async function GET(req:NextRequest,){
         ])
         totalCourses = await Course.countDocuments(matchQuery);
     }
+    // Ensure totalCourses is defined before calculating totalPages
+    if (totalCourses === undefined || totalCourses === 0) {
+        return NextResponse.json({
+            message: "No courses found",
+            data: [],
+            total: 0,
+            page: pageNumber,
+            totalPages: 0,
+        });
+    }
 
     return NextResponse.json({
-        message:"this from course",
+        message: "this from course",
         data: courses,
         total: totalCourses,
-        page:pageNumber,
-        totalPages: Math.ceil(totalCourses / limit),
-    })
+        page: pageNumber,
+        totalPages: Math.ceil(totalCourses / limit), // Safe calculation
+    });
 }
 
-export async function POST(req){
+export async function POST(req:NextRequest){
     const body = await req.json()
     const newCourse = await Course.create(body);
     return NextResponse.json({message:"this from course post", data:newCourse})
