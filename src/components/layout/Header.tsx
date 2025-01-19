@@ -43,7 +43,7 @@ export default function Header() {
     }, [cartItems]);
 
     const router = useRouter();
-    const handleSearchCourse = async (event) => {
+    const handleSearchCourse = async (event:any) => {
         event.preventDefault();
 
             router.push(`/all-courses?keyword=${event.target.course.value}`);

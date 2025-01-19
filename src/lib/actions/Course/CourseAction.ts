@@ -6,7 +6,7 @@
 }
 */
 
-export const fetchCourses = async (page, keyword) => {
+export const fetchCourses = async (page:any, keyword:any) => {
     try {
 
         const queryParams = new URLSearchParams();
@@ -37,7 +37,7 @@ export const fetchCourses = async (page, keyword) => {
         };
     }
 }
-export const categoryFilter = async (category)=>{
+export const categoryFilter = async (category:any)=>{
     try {
         const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/categories/${category}`);
         if(!response.ok){
@@ -62,14 +62,20 @@ export const getCourse = async (courseId: string) => {
         const course = await response.json();
         return course;
     }catch (error) {
+        if (error instanceof Error) {
+            return {
+                success: false,
+                error: error.message,
+            };
+        }
         return {
             success: false,
-            error: error.message,
+            error: "An unknown error occurred.",
         };
     }
 }
 
-export default async function getCourseCategoriWise(keyword){
+export default async function getCourseCategoriWise(keyword:any){
     try {
         console.log(keyword)
         const response = await fetch(`/api/course?keyword=${encodeURIComponent(keyword)}`);
@@ -81,9 +87,15 @@ export default async function getCourseCategoriWise(keyword){
         const course = await response.json();
         return course;
     }catch (error) {
+        if (error instanceof Error) {
+            return {
+                success: false,
+                error: error.message,
+            };
+        }
         return {
             success: false,
-            error: error.message,
+            error: "An unknown error occurred.",
         };
     }
 }

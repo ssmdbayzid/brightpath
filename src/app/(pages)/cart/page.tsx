@@ -9,19 +9,19 @@ import {RootState} from "@/store/store";
 
 
 
-type CartItem = {
-    _id: string;
-    title: string;
-    thumbnail: string;
-    price_old: string;
-    price_discount: string;
-    price_new: string; // Ensure this is consistently formatted as "Currency Amount"
-    [key:string]: any;
-};
+// type CartItem = {
+//     _id: string;
+//     title: string;
+//     thumbnail: string;
+//     price_old: string;
+//     price_discount: string;
+//     price_new: string; // Ensure this is consistently formatted as "Currency Amount"
+//     [key:string]: any;
+// };
 
 
 export default function  CardPage (){
-    const [cart, setCart] = useState<CartItem[]>([])
+    const [cart, setCart] = useState<any[]>([])
     const cartItems = useSelector((state: RootState) =>state.cart.cart)
 
     const dispatch = useDispatch()
@@ -48,7 +48,7 @@ export default function  CardPage (){
             </div>
                 <div className={styles.contents}>
                 <div className={styles.cartArea}>
-                    {cart.map((item, index) =>
+                    {cart.map((item:any, index:number) =>
                         <div key={index} className={styles.cart}>
                             <div className={styles.content}>
                                 <div className={styles.images}>

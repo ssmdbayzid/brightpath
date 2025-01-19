@@ -13,10 +13,10 @@ export default function CompletedAnHour(){
         <div className="container section">
             <div className={styles.heading}>
                 <h1>Complete in under an hour.</h1>
-                <Link href="/all-course" className={`btn ${styles.btn}`}>All Course</Link>
+                <Link href="/all-courses" className={`btn ${styles.btn}`}>All Course</Link>
             </div>
             <div className={styles.courseContainer}>
-                {completeUnderAnHour && completeUnderAnHour.map((course, index) =>
+                {completeUnderAnHour && completeUnderAnHour.map((course:any, index:number) =>
                     <div key={index} className={styles.slide}>
                         <div className={styles.card}>
                             <Image src={course.thumbnail} className={styles.img} width={300} height={200}
@@ -25,14 +25,14 @@ export default function CompletedAnHour(){
                                 <Link href={`/all-courses/${course.id}`}><h2>{course.title}</h2></Link>
                                 <div className={styles.remarks}>
                                     <div className={styles.ratingContent}>
-                                        {[...Array(5)].map((_, index) => (
+                                        {[...Array(5)].map((_:any, index:number) => (
                                             <FaStar key={index} className={styles.ratingIcon}/>
                                         ))}
                                     </div>
                                     <p className={styles.students}>{course.students} students</p>
                                 </div>
                                 <ul className={styles.tag_list}>
-                                    {course && course?.categories.map((tag, index) =>
+                                    {course && course?.categories.map((tag:any, index:number) =>
                                         <li key={index} className={styles.carousel_tag_items}>{tag}</li>)}
                                 </ul>
 

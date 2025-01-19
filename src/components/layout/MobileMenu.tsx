@@ -23,7 +23,7 @@ const links = [
 ]
 
 
-export default function MobileMenu({openMenu, setOpenMenu}) {
+export default function MobileMenu({openMenu, setOpenMenu}:{openMenu:any, setOpenMenu:any}) {
 const [openCategories, setOpenCategories] = useState(false)
 const [openOthers, setOpenOthers] = useState(false)
     console.log(openCategories)

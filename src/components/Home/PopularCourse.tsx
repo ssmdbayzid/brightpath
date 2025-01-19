@@ -4,7 +4,7 @@ import Link from "next/link";
 
     const getAllCourses = async ()=>{
         const data =  await fetch(`http://localhost:3000/api/course`);
-        const courses = await data.json();
+        const courses  = await data.json();
         return courses;
     }
 export default async function PopularCourse() {

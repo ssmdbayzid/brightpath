@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useRef, useEffect } from "react";
-import { Swiper as SwiperInstance, Navigation } from "swiper/modules";
+import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -13,24 +13,10 @@ import { CartButtons } from "@/components/Courses/CartButtons";
 import { FaStar } from "react-icons/fa6";
 import Link from "next/link";
 
-type Course = {
-    _id: string;
-    thumbnail: string;
-    title: string;
-    students: number;
-    categories: string[];
-    summary: string;
-    price_old: string | number;
-    price_discount: string | number;
-    price_new: string | number;
-};
 
-type PopularCourseCarouselProps = {
-    courses: { data: Course[] };
-};
 
-export default function Popular_Course_Carousel({ courses }: PopularCourseCarouselProps) {
-    const swiperRef = useRef<SwiperInstance | null>(null);
+export default function Popular_Course_Carousel({ courses }: any) {
+    const swiperRef = useRef<any>(null); // Swiper instance
 
     useEffect(() => {
         if (swiperRef.current?.navigation) {
@@ -39,7 +25,7 @@ export default function Popular_Course_Carousel({ courses }: PopularCourseCarous
         }
     }, []);
 
-    const handleSlideChange = (swiper: SwiperInstance) => {
+    const handleSlideChange = (swiper: any) => {
         const prevButton = document.querySelector(".prev-btn") as HTMLElement | null;
         const nextButton = document.querySelector(".next-btn") as HTMLElement | null;
 
@@ -51,12 +37,10 @@ export default function Popular_Course_Carousel({ courses }: PopularCourseCarous
 
     return (
         <div className={styles.carousel}>
-            {/* Custom navigation buttons */}
+            {/* Swiper Component */}
             <Swiper
                 modules={[Navigation]}
-                onSwiper={(swiper) => {
-                    swiperRef.current = swiper;
-                }}
+                onSwiper={(swiper) => (swiperRef.current = swiper)}
                 navigation={{
                     prevEl: ".prev-btn",
                     nextEl: ".next-btn",
@@ -79,7 +63,7 @@ export default function Popular_Course_Carousel({ courses }: PopularCourseCarous
                 }}
                 className={styles.track}
             >
-                {courses?.data?.slice(0, 8).map((course, index) => (
+                {courses?.data?.slice(0, 8).map((course:any, index:number) => (
                     <SwiperSlide key={index} className={styles.slide}>
                         <div className={styles.card}>
                             <Image
@@ -102,7 +86,7 @@ export default function Popular_Course_Carousel({ courses }: PopularCourseCarous
                                     <p className={styles.students}>{course.students} students</p>
                                 </div>
                                 <ul className={styles.tag_list}>
-                                    {course.categories.map((tag, index) => (
+                                    {course.categories.map((tag:any, index:number) => (
                                         <Link key={index} href={`/categories?keyword=${tag}`}>
                                             <li className={styles.carousel_tag_items}>{tag}</li>
                                         </Link>
@@ -126,6 +110,7 @@ export default function Popular_Course_Carousel({ courses }: PopularCourseCarous
                     </SwiperSlide>
                 ))}
             </Swiper>
+            {/* Custom navigation buttons */}
             <div className={styles.navigate_buttons}>
                 <div className={`${styles.carouselBtn} prev-btn`}>
                     <IoIosArrowBack />

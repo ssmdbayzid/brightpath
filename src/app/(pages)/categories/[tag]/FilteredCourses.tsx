@@ -28,7 +28,7 @@ export default async function FilteredCourses({courses}: CoursesListProps) {
     return (
         <div className={styles.courseContainer}>
             {!courses ? <h3>Data not found</h3> :
-                courses.map((course, index) =>
+                courses.map((course:any, index:number) =>
                     <div key={index} className={styles.card}>
                     <Image src={course?.thumbnail} className={styles.img} width={400} height={300}
                            alt="course-image"/>
@@ -36,14 +36,14 @@ export default async function FilteredCourses({courses}: CoursesListProps) {
                         <Link href={`/all-courses/${course?._id}`} className={styles.title}><h2>{course.title}</h2></Link>
                         <div className={styles.remarks}>
                             <div className={styles.ratingContent}>
-                                {[...Array(5)].map((_, index) => (
+                                {[...Array(5)].map((_:any, index:number) => (
                                     <FaStar key={index} className={styles.ratingIcon}/>
                                 ))}
                             </div>
                             <p className={styles.students}>{course.students} students</p>
                         </div>
                         <ul className={styles.tag_list}>
-                            {course && course.categories.map((tag, index) =>
+                            {course && course.categories.map((tag:any, index:number) =>
                                 <Link key={index} href={`/categories?keyword=${tag}`}>
                                     <li className={styles.carousel_tag_items}>{tag}</li>
                                 </Link>)}

@@ -13,10 +13,10 @@ export default function AllCategory() {
                     <h1>Explore over 200+ courses</h1>
                     <p>Over 200 affordable courses to empower your future.</p>
                 </div>
-                <Link href="/all-course" className={`btn ${styles.btn}`}>View All categories</Link>
+                <Link href="/all-courses" className={`btn ${styles.btn}`}>View All categories</Link>
             </div>
             <ul className={styles.categoryContainer}>
-            {courseData && courseData.map((course, index)=>
+            {courseData && courseData.map((course:any, index:number)=>
                 <li key={index} className={styles.card}><Link href={`/categories/${course?.category?.name}`}>
                     <Image src={course?.category?.categoryIcon} width={300} height={300} className={styles.img} alt="category-image" />
                     <div className={styles.content}>

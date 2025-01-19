@@ -187,3 +187,21 @@ a.secondary {
   }
 }
 
+.paginationArea{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:8px;
+
+  .btn{
+    padding:5px 10px;
+    background: #202020;
+    color: white;
+    border: 1px solid darkgray;
+    cursor:pointer;
+    &.active{
+      background: white;
+      color: black;
+    }
+  }
+}

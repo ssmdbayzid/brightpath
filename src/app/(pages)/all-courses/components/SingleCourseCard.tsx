@@ -5,21 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 import {CartButtons} from "@/components/Courses/CartButtons";
 
-type Course = {
-    _id: string;
-    thumbnail: string;
-    title: string;
-    price_old: string | number;
-    price_discount: string | number;
-    price_new: string | number;
-    [key:string]: any;
-};
 
-type CourseProps = {
-    course: Course;
-};
-
-export default function SingleCourseCard({ course }: CourseProps) {
+export default function SingleCourseCard({ course }: any) {
     return (
         <div className={styles.card}>
             <div className={styles.cardImage}>

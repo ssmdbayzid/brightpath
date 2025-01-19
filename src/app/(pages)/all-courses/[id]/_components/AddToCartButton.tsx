@@ -5,11 +5,8 @@ import Link from "next/link";
 import React from "react";
 
 
-type AddToCartProps = {
-    course?:React.ReactNode;
-}
 
-export default function AddToCartButton({course}: AddToCartProps) {
+export default function AddToCartButton({course}:any) {
     const dispatch = useDispatch()
     return <div className={styles.actionbtns}>
         <button

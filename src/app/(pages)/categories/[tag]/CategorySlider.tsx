@@ -40,7 +40,7 @@ export default function CategoriesSlider({filtered}:{filtered:string}) {
                 }}
             >
                 {courseData &&
-                    courseData.map((course, index) => (
+                    courseData.map((course:any, index:number) => (
                         <SwiperSlide key={index} className={`${filtered === course?.category?.name && styles.active} ${styles.card}`}>
                             <Link href={`/categories/${course?.category?.name}`}>
                                 <Image

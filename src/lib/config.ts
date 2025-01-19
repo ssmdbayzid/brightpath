@@ -1,15 +1,17 @@
 import * as mongoose from "mongoose";
 
-export const connectDb = async() =>{
-try {
-    if (mongoose.connection.readyState >= 1) return;
-    console.log("Database Connected");
-    return mongoose.connect("mongodb+srv://brightpath:vq1QeXOPbI3TuS1U@britghtpath.gfx67.mongodb.net/?retryWrites=true&w=majority&appName=BritghtPath", {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-    });
+export const connectDb = async () => {
+    try {
+        if (mongoose.connection.readyState >= 1) return;
 
-}catch(err){
-    console.log("database err", err);
-}
-}
+        const dbUrl = process.env.DB_URL;
+        if (!dbUrl) {
+            throw new Error("Database URL is not defined in environment variables");
+        }
+
+        await mongoose.connect(dbUrl); // Options like `useNewUrlParser` and `useUnifiedTopology` are now the default behavior.
+        console.log("Database Connected");
+    } catch (err) {
+        console.error("Database connection error:", err);
+    }
+};

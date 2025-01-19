@@ -60,7 +60,7 @@ export default function Partner(){
                 }}
                 className={styles.track}
             >
-                {partners && partners.map((partner, index)=>
+                {partners && partners.map((partner:any, index:number)=>
                 <SwiperSlide key={index}>
                     <div>
                         <Image src={partner.icon} alt={partner.name} width={120} height={70}/>

@@ -6,11 +6,9 @@ import Link from "next/link";
 import React from "react";
 
 
-type ActionButtonsProps = {
-    course?: React.ReactNode;
-}
 
-export default function CourseDetailsActionButtons ({course}: ActionButtonsProps){
+
+export default function CourseDetailsActionButtons ({course}: any){
     const dispatch = useDispatch()
 
     return <div className={styles.actionbtns}>

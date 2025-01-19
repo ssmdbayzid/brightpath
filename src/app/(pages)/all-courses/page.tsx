@@ -1,118 +1,44 @@
-'use client';
 
 import styles from './allCourses.module.scss';
 import SingleCourseCard from "@/app/(pages)/all-courses/components/SingleCourseCard";
 import { fetchCourses } from "@/lib/actions/Course/CourseAction";
-import { useSearchParams, useRouter } from 'next/navigation';
-import { useEffect, useState } from "react";
-import { MdKeyboardDoubleArrowLeft, MdKeyboardDoubleArrowRight } from "react-icons/md";
-import Loader from "@/components/Common/Loader";
 
-type Course = {
-    _id: string;
-    thumbnail: string;
-    title: string;
-    price_old: string | number;
-    price_discount: string | number;
-    price_new: string | number;
-    [key: string]: any;
-};
+// import { MdKeyboardDoubleArrowLeft, MdKeyboardDoubleArrowRight } from "react-icons/md";
+// import Loader from "@/components/Common/Loader";
 
-export default function AllCourses() {
-    const [currentPage, setCurrentPage] = useState(1);
-    const [coursesData, setCoursesData] = useState<Course[] | null>(null);
-    const [loading, setLoading] = useState(false);
-    const [error, setError] = useState<string | null>(null);
-    const [totalPages, setTotalPages] = useState<number>(1);
+type Params = Promise<{slug: string}>
+type SearchParams = Promise<{[key: string]: string | string[] | undefined}>
 
-    const searchParams = useSearchParams();
-    const page = searchParams.get("page");
-    const keyword = searchParams.get("keyword");
+export async function generateMetadata(props: {params : Params, searchParams:SearchParams}){
+    {
+        const params = await props.params
+        const searchParams = await props.searchParams
 
-    const router = useRouter();
+        console.log('Params:', params); // Example usage
+        console.log('SearchParams:', searchParams); // Example usage
+    }
+}
 
-    useEffect(() => {
-        setCurrentPage(parseInt(page || '1', 10));
-    }, [page]);
+export default async function AllCourses(props: {params: Params; searchParams: SearchParams }) {
+    const searchParams = await props.searchParams
+    const page =  searchParams.page
 
-    useEffect(() => {
-        const loadCourses = async () => {
-            setLoading(true);
-            setError(null);
-
-            try {
-                const result = await fetchCourses(currentPage, keyword);
-                if (result.success) {
-                    const { data, totalPages } = result.data;
-                    setCoursesData(data);
-                    setTotalPages(totalPages);
-                } else {
-                    setError(result.error || "Failed to load courses.");
-                }
-            } catch (err: any) {
-                setError(err.message || "An unexpected error occurred.");
-            } finally {
-                setLoading(false);
-            }
-        };
-
-        loadCourses();
-    }, [currentPage, keyword]);
-
-    const handlePageChange = (page: number) => {
-        router.push(`/all-courses?page=${page}`);
-    };
-
-    const renderPagination = () => {
-        const pages = Array.from({ length: totalPages }, (_, i) => i + 1);
-
-        return (
-            <div className={styles.pagination}>
-                <button
-                    onClick={() => handlePageChange(currentPage - 1)}
-                    disabled={currentPage === 1}
-                    className={styles.btn}
-                >
-                    <MdKeyboardDoubleArrowLeft size={12} />
-                </button>
-                {pages.map((page) => (
-                    <button
-                        key={page}
-                        onClick={() => handlePageChange(page)}
-                        className={`${currentPage === page ? styles.activeBtn : styles.btn}`}
-                    >
-                        {page}
-                    </button>
-                ))}
-                <button
-                    onClick={() => handlePageChange(currentPage + 1)}
-                    disabled={currentPage === totalPages}
-                    className={styles.btn}
-                >
-                    <MdKeyboardDoubleArrowRight size={12} />
-                </button>
-            </div>
-        );
-    };
-
+    const result = await fetchCourses(page, "")
+    console.log("not-found", result)
     return (
-        <div className="container section">
-            {loading ? (
-                <Loader />
-            ) : error ? (
-                <p className={styles.error}>{error}</p>
-            ) : coursesData && coursesData.length > 0 ? (
-                <div>
-                    <div className={styles.contentArea}>
-                        {coursesData.map((course) => (
-                            <SingleCourseCard key={course._id} course={course} />
-                        ))}
+            <div className="container section">
+                {result.data.data && result.data.data.length > 0 ? (
+                    <div>
+                        <div className={styles.contentArea}>
+                            {result.data.data.map((course: any) => (
+                                <SingleCourseCard key={course._id} course={course} />
+                            ))}
+                        </div>
+                        {/*{totalPages > 1 && renderPagination()}*/}
                     </div>
-                    {totalPages > 1 && renderPagination()}
-                </div>
-            ) : (
-                <div className={styles.notFound}>Data not found</div>
-            )}
-        </div>
+                ) : (
+                    <div className={styles.notFound}>Data not found</div>
+                )}
+            </div>
     );
 }
