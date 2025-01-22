@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.scss";
-import Header from "@/components/layout/Header";
+// import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import ReduxProvider from "@/Hooks/ReduxProvider";
 import 'react-responsive-modal/styles.css';
@@ -32,7 +32,7 @@ export default function RootLayout({children,}: Readonly<{children: React.ReactN
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
       <ReduxProvider>
-          <Header/>
+          {/*<Header/>*/}
       <GoToButton />
           <div className="children">{children}</div>
           <Footer/>
